@@ -19,6 +19,7 @@ public class Mycartadapter extends RecyclerView.Adapter<Mycartadapter.RecyclerVi
 
     private ArrayList<Cartmodel> cartmodelArrayList;
     private Context mcontext;
+    private static Gridhomeadapter.ClickListener mOnClickListener;
 
     public Mycartadapter(ArrayList<Cartmodel> cartmodelArrayList, Context mcontext) {
         this.cartmodelArrayList = cartmodelArrayList;
@@ -64,4 +65,12 @@ public class Mycartadapter extends RecyclerView.Adapter<Mycartadapter.RecyclerVi
             img_remove = itemView.findViewById(R.id.img_remove);
         }
     }
+    public interface ClickListener {
+        void onItemClick(int position, View v);
+    }
+
+    public void setOnItemClickListener(Gridhomeadapter.ClickListener clickListener) {
+        this.mOnClickListener = clickListener;
+    }
+
 }

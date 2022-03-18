@@ -25,6 +25,9 @@
             android:name=".Singin"
             android:exported="false" />
         <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
             android:name=".Splash"
             android:exported="true" >
             <intent-filter>

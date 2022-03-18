@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Fragments.CartFragment">
 
@@ -129,7 +130,7 @@
         android:textColor="@color/black"/>
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_checkout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

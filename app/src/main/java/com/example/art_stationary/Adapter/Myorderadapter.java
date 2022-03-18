@@ -20,6 +20,8 @@ public class Myorderadapter extends RecyclerView.Adapter<Myorderadapter.Recycler
 
     private ArrayList<Myordermodel> myordermodelArrayList;
     private Context mcontext;
+    private static Gridhomeadapter.ClickListener mOnClickListener;
+
 
     public Myorderadapter(ArrayList<Myordermodel> myordermodelArrayList, Context mcontext) {
         this.myordermodelArrayList = myordermodelArrayList;
@@ -61,5 +63,12 @@ public class Myorderadapter extends RecyclerView.Adapter<Myorderadapter.Recycler
             tv_date = itemView.findViewById(R.id.tv_date);
             tv_statusconfirm = itemView.findViewById(R.id.tv_statusconfirm);
         }
+    }
+    public interface ClickListener {
+        void onItemClick(int position, View v);
+    }
+
+    public void setOnItemClickListener(Gridhomeadapter.ClickListener clickListener) {
+        this.mOnClickListener = clickListener;
     }
 }

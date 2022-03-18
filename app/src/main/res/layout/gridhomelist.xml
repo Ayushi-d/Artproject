@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -9,11 +10,13 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/white"
         android:layout_marginLeft="5dp"
         app:layout_goneMarginTop="5dp">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/white">
             <ImageView
                 android:id="@+id/img_book"
                 android:layout_width="wrap_content"
@@ -28,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="Stabilo swing cool"
                 android:gravity="center"
+                android:textColor="@color/black"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_book"
                 app:layout_constraintLeft_toLeftOf="parent"/>
@@ -36,6 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="10.500 KWD"
+                android:textColor="@color/black"
                 android:gravity="center"
                 app:layout_constraintTop_toBottomOf="@id/tv_bookname"
                 app:layout_constraintLeft_toLeftOf="parent"

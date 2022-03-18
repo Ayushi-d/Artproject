@@ -142,15 +142,15 @@
 
 
     <TextView
-        android:id="@+id/text_donthaveacc"
+        android:id="@+id/text_haveacc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         android:text="@string/alreadyhaveacc"
         android:textSize="15dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/button_signin"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

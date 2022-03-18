@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.example.art_stationary.Fragments.CaategoryFragment;
 import com.example.art_stationary.Fragments.CartFragment;
+import com.example.art_stationary.Fragments.CategoriesFragment;
 import com.example.art_stationary.Fragments.HomeFragment;
 import com.example.art_stationary.Fragments.ProfileFragment;
+import com.example.art_stationary.Fragments.AllcategoriesFragment;
 import com.example.art_stationary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     HomeFragment firstFragment = new HomeFragment();
     CartFragment secondFragment = new CartFragment();
-    CaategoryFragment thirdFragment = new CaategoryFragment();
+    CategoriesFragment thirdFragment = new CategoriesFragment();
     ProfileFragment profileFragment = new ProfileFragment();
 
     @Override

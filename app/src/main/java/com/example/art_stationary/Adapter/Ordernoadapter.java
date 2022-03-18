@@ -20,6 +20,8 @@ public class Ordernoadapter extends RecyclerView.Adapter<Ordernoadapter.Recycler
 
     private ArrayList<OrdernoModel> ordernoModelArrayList;
     private Context mcontext;
+    private static Gridhomeadapter.ClickListener mOnClickListener;
+
 
     public Ordernoadapter(ArrayList<OrdernoModel> ordernoModelArrayList, Context mcontext) {
         this.ordernoModelArrayList = ordernoModelArrayList;
@@ -63,5 +65,12 @@ public class Ordernoadapter extends RecyclerView.Adapter<Ordernoadapter.Recycler
             textquantityno = itemView.findViewById(R.id.textquantityno);
             img_item = itemView.findViewById(R.id.img_item);
         }
+    }
+    public interface ClickListener {
+        void onItemClick(int position, View v);
+    }
+
+    public void setOnItemClickListener(Gridhomeadapter.ClickListener clickListener) {
+        this.mOnClickListener = clickListener;
     }
 }
