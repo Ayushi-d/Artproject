@@ -19,6 +19,7 @@ import com.example.art_stationary.Adapter.Mostpopularadapter;
 import com.example.art_stationary.Adapter.Offeradapter;
 import com.example.art_stationary.Adapter.Verticalhomeadapter;
 import com.example.art_stationary.Adapter.ViewPagerAdapter;
+import com.example.art_stationary.Global;
 import com.example.art_stationary.Model.BrandModel;
 import com.example.art_stationary.Model.Mostpopularmodel;
 import com.example.art_stationary.Model.Offermodel;
@@ -58,7 +59,7 @@ public class HomeFragment extends Fragment {
         viewPager.setAdapter(viewPagerAdapter);
         BottomNavigationView navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.VISIBLE);
-
+        //Global.instance.showhidebottomNav(view,true);
 
         gridlist = view.findViewById(R.id.gridlist);
         verticallist= view.findViewById(R.id.verticallist);

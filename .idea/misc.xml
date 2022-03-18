@@ -3,35 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/bottonnavigationbg.xml" value="0.15" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/buttonbackgroundcolor.xml" value="0.15" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/curvebuttombackground.xml" value="0.15" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_forgot_password.xml" value="0.1265625" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_main.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_navigate_dots.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_select_language.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_signup.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/brandlistlayout.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/custom_dots.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/customcategorione.xml" value="0.1265625" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/custommycard.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/custommyorders.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_allcategories.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_caategory.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_cart.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_categories.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_categories_list.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_checkout.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_home.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_item.xml" value="0.23540315106580167" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_myorderfragment.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_profile.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_saved_address.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_subcategories.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/gridhomelist.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/signin.xml" value="0.2351851851851852" />
-        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/menu/bottommenu.xml" value="0.2351851851851852" />
         <entry key="app/src/main/res/drawable/curvebuttombackground.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_curverectangle.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20989583333333334" />
         <entry key="app/src/main/res/layout/activity_navigate_dots.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
@@ -43,7 +16,7 @@
         <entry key="app/src/main/res/layout/customorderno.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_address.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_caategory.xml" value="0.25104166666666666" />
-        <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.24074074074074073" />
         <entry key="app/src/main/res/layout/fragment_categoriesone.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_categoriestwo.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.21430358886718753" />
@@ -56,6 +29,8 @@
         <entry key="app/src/main/res/layout/fragment_saved_address.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tearmsandcondition.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/gridhomelist.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/iteminto.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/verticalimagecustomlist.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottommenu.xml" value="0.20989583333333334" />
       </map>

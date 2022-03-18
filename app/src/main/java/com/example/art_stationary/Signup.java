@@ -15,7 +15,7 @@ public class Signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        text_haveacc.findViewById(R.id.text_haveacc);
+        text_haveacc = findViewById(R.id.text_haveacc);
         text_haveacc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

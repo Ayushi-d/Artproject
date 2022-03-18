@@ -38,10 +38,10 @@ public class Categoriesone extends Fragment {
         categoriesonelist=view.findViewById(R.id.categoriesonelist);
         mycategorimodelArrayList=new ArrayList<>();
 
-        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.id.img_book));
-        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.id.img_book));
-        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.id.img_book));
-        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.id.img_book));
+        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.drawable.custombookimage));
+        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.drawable.custombookimage));
+        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.drawable.custombookimage));
+        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.drawable.custombookimage));
 
         Categorioneadapter categorioneadapter=new Categorioneadapter(mycategorimodelArrayList,getActivity());
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());

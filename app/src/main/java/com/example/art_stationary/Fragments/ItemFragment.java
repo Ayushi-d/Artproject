@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.art_stationary.Global;
 import com.example.art_stationary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -59,6 +60,7 @@ public class ItemFragment extends Fragment {
         });
         BottomNavigationView navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
+      //  Global.instance.showhidebottomNav(view,false);
 
         return view;
     }

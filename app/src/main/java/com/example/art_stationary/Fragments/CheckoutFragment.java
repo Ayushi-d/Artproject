@@ -19,6 +19,8 @@ public class CheckoutFragment extends Fragment {
      TextView txt_edit;
      ConstraintLayout card_alladdress;
      Button button_paynow;
+    ConstraintLayout toolbar;
+    TextView tooltext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,9 @@ public class CheckoutFragment extends Fragment {
         txt_edit=view.findViewById(R.id.txt_edit);
         card_alladdress=view.findViewById(R.id.card_alladdress);
         button_paynow=view.findViewById(R.id.button_paynow);
+        toolbar = view.findViewById(R.id.toolbar);
+        tooltext = toolbar.findViewById(R.id.toolheadtext);
+        tooltext.setText("Checkout");
         txt_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

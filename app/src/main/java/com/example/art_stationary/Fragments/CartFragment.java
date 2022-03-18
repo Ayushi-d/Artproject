@@ -2,6 +2,7 @@ package com.example.art_stationary.Fragments;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.example.art_stationary.Adapter.Gridhomeadapter;
 import com.example.art_stationary.Adapter.Mycartadapter;
@@ -26,6 +29,8 @@ import java.util.ArrayList;
 public class CartFragment extends Fragment {
      RecyclerView cartlist;
      Button button_checkout;
+     ConstraintLayout toolbar;
+     TextView tooltext;
     private ArrayList<Cartmodel> cartmodelArrayList;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,7 +45,9 @@ public class CartFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_cart, container, false);
         cartlist = view.findViewById(R.id.cartlist);
         button_checkout = view.findViewById(R.id.button_checkout);
-
+        toolbar = view.findViewById(R.id.toolbar);
+        tooltext = toolbar.findViewById(R.id.toolheadtext);
+        tooltext.setText("Cart");
         button_checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
