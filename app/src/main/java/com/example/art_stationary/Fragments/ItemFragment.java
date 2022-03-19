@@ -58,10 +58,9 @@ public class ItemFragment extends Fragment {
                 ft.addToBackStack(null);
             }
         });
+
         BottomNavigationView navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
-      //  Global.instance.showhidebottomNav(view,false);
-
         return view;
     }
 }

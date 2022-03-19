@@ -18,12 +18,12 @@ public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
 
     private static final float DP = Resources.getSystem().getDisplayMetrics().density;
 
-    private final int mIndicatorHeight = (int) (DP * 16);
+    private final int mIndicatorHeight = (int) (DP * 8);
 
-    private final float mIndicatorStrokeWidth = DP * 6;
-    private final float mIndicatorItemLength = DP * 16;
+    private final float mIndicatorStrokeWidth = DP * 8;
+    private final float mIndicatorItemLength = DP * 8;
 
-    private final float mIndicatorItemPadding = DP * 12;
+    private final float mIndicatorItemPadding = DP * 20;
 
     private final Interpolator mInterpolator = new AccelerateDecelerateInterpolator();
 
@@ -49,7 +49,7 @@ public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
         float indicatorStartX = (parent.getWidth() - indicatorTotalWidth) / 2F;
 
         // center vertically in the allotted space
-        float indicatorPosY = parent.getHeight() - mIndicatorHeight / 2F;
+        float indicatorPosY = parent.getHeight() - parent.getHeight()/6;
 
         drawInactiveIndicators(c, indicatorStartX, indicatorPosY, itemCount);
 

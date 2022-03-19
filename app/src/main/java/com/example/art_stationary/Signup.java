@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.art_stationary.Activity.MainActivity;
+
 import java.util.regex.Pattern;
 
 public class Signup extends AppCompatActivity {
@@ -20,7 +22,7 @@ public class Signup extends AppCompatActivity {
      EditText et_email;
      EditText et_password;
      EditText et_name;
-     Button button_signin;
+     Button button_signup;
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     //"(?=.*[0-9])" +
@@ -39,11 +41,12 @@ public class Signup extends AppCompatActivity {
         et_email = findViewById(R.id.et_email);
         et_password = findViewById(R.id.et_password);
         et_name = findViewById(R.id.et_name);
-        button_signin = findViewById(R.id.button_signin);
-        button_signin.setOnClickListener(new View.OnClickListener() {
+        button_signup = findViewById(R.id.button_signup);
+        button_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
               //add confirm input
+                confirmInput(view);
             }
         });
         text_haveacc = findViewById(R.id.text_haveacc);
@@ -110,6 +113,8 @@ public class Signup extends AppCompatActivity {
         input += "Username: " + et_name.getText().toString();
         input += "\n";
         input += "Password: " + et_password.getText().toString();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
 
         Toast.makeText(this, input, Toast.LENGTH_SHORT).show();
     }
