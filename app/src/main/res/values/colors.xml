@@ -6,6 +6,9 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="headingblack">#1F1A17</color>
+    <color name="textgrey">#ABB1C0</color>
+    <color name="lightblack">#686E7F</color>
     <color name="cardgrey">#F2F2F2</color>
     <color name="blue">#003399</color>
     <color name="thankyoubackgroundcolor">#FEFDFC</color>
@@ -13,6 +16,8 @@
     <color name="grey">#AEB4C2</color>
     <color name="green">#00e600</color>
     <color name="darkgreen">#006633</color>
+    <color name="darkpurple">#003399</color>
+    <color name="lightpurple">#7FA8CB</color>
     <color name="greycard">#F2F2F2</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Selectlanguage_border_green">#006633</color>

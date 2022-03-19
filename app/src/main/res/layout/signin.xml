@@ -23,10 +23,11 @@
         android:text="Sign In"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintTop_toBottomOf="@id/image_back"
-        android:textColor="@color/black"
+        android:textColor="@color/headingblack"
         android:textStyle="bold"
+        android:fontFamily="@font/popinsbold"
         android:layout_marginTop="20dp"
-        android:textSize="20dp"/>
+        android:textSize="24dp"/>
 
     <EditText
         android:id="@+id/et_email"
@@ -37,8 +38,11 @@
         android:drawableRight="@drawable/emailicon"
         android:paddingRight="10dp"
         android:hint="Email"
-        android:textColorHint="@color/black"
-        android:textSize="15dp"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:textColorHint="@color/headingblack"
+        android:textSize="14dp"
+        android:fontFamily="@font/poppins_regular"
         android:background="@drawable/logintextbackground"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
@@ -52,8 +56,10 @@
         android:hint="Password"
         android:drawableRight="@drawable/passwordicon"
         android:paddingRight="10dp"
-        android:textColorHint="@color/black"
-        android:textSize="15dp"
+        android:textColorHint="@color/headingblack"
+        android:textSize="14dp"
+        android:singleLine="true"
+        android:fontFamily="@font/poppins_regular"
         android:layout_height="wrap_content"
         android:background="@drawable/logintextbackground"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
@@ -66,9 +72,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         android:text="Forgot password?"
-        android:textSize="15dp"
+        android:textSize="14dp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/black"
+        android:textColor="@color/headingblack"
+        android:fontFamily="@font/poppins_regular"
         app:layout_constraintTop_toBottomOf="@id/et_password"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -76,8 +83,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/signin"
+        android:fontFamily="@font/popinsbold"
+        android:textStyle="bold"
         android:backgroundTint="@color/buttongreen"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="17dp"
         android:background="@drawable/curvebuttombackground"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
@@ -91,9 +100,10 @@
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         android:text="@string/donthaveacc"
-        android:textSize="15dp"
+        android:textSize="16dp"
+        android:fontFamily="@font/poppins_regular"
         android:layout_marginTop="60dp"
-        android:textColor="@color/black"
+        android:textColor="@color/headingblack"
         app:layout_constraintTop_toBottomOf="@id/button_signin"/>
 
 

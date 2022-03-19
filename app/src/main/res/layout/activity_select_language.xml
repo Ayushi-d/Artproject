@@ -11,10 +11,10 @@
     <ImageView
         android:id="@+id/Image_applogo"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:src="@drawable/applogo"
+        android:src="@drawable/logotest"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintTop_toBottomOf="@id/guidelinetop" />
@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:text="Select your language"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="17dp"
+        android:fontFamily="@font/poppins_regular"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintTop_toBottomOf="@id/guidelinesecondtop" />
@@ -41,10 +42,11 @@
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintTop_toBottomOf="@id/textlanguageselect"
         android:text="English"
+        android:fontFamily="@font/nutinoregular"
         android:textColor="@color/black"
         android:layout_marginTop="40dp"
         android:background="@drawable/curverectangle"
-        android:textSize="15dp"/>
+        android:textSize="17dp"/>
 
     <TextView
         android:id="@+id/texturdu"
@@ -54,13 +56,15 @@
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintTop_toBottomOf="@id/textenglishh"
-        android:text="Urdu"
+        android:text="العربية"
+        android:gravity="left"
+        android:fontFamily="@font/nutinoregular"
         android:textColor="@color/black"
         android:drawableLeft="@drawable/kuwaiturdu"
         android:drawablePadding="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/curverectangle"
-        android:textSize="15dp"/>
+        android:textSize="17dp"/>
 
     <ImageView
         android:id="@+id/iconeng"

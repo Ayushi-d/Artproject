@@ -13,33 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
 
-    private int colorActive = R.color.blue;
+    private int colorActive = R.color.darkpurple;
     private int colorInactive = R.color.grey;
 
     private static final float DP = Resources.getSystem().getDisplayMetrics().density;
 
-    /**
-     * Height of the space the indicator takes up at the bottom of the view.
-     */
     private final int mIndicatorHeight = (int) (DP * 16);
 
-    /**
-     * Indicator stroke width.
-     */
     private final float mIndicatorStrokeWidth = DP * 6;
-
-    /**
-     * Indicator width.
-     */
     private final float mIndicatorItemLength = DP * 16;
-    /**
-     * Padding between indicators.
-     */
+
     private final float mIndicatorItemPadding = DP * 12;
 
-    /**
-     * Some more natural animation interpolation
-     */
     private final Interpolator mInterpolator = new AccelerateDecelerateInterpolator();
 
     private final Paint mPaint = new Paint();
