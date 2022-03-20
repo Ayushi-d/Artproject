@@ -1,5 +1,7 @@
 package com.example.art_stationary.Fragments;
 
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,6 +14,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.art_stationary.Adapter.BrandAdpter;
 import com.example.art_stationary.Adapter.Gridhomeadapter;
@@ -29,6 +33,7 @@ import com.example.art_stationary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class HomeFragment extends Fragment {
@@ -37,18 +42,25 @@ public class HomeFragment extends Fragment {
     private RecyclerView verticallist;
     private RecyclerView Offerslist;
     private RecyclerView mostpopularlist;
+    LinearLayout SliderDots;
+    private List<ImageView> dots;
+    private final static int NUM_PAGES = 3;
+
 
     private ArrayList<Recyclerhomemodel> recyclerDataArrayList;
     private ArrayList<BrandModel> verticalArraylist;
     private ArrayList<Offermodel> OffersArraylist;
     private ArrayList<Mostpopularmodel> mostpopularArraylist;
+
     public HomeFragment() {
         // Required empty public constructor
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,26 +71,43 @@ public class HomeFragment extends Fragment {
         viewPager.setAdapter(viewPagerAdapter);
         BottomNavigationView navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.VISIBLE);
+
+       // addDots();
         //Global.instance.showhidebottomNav(view,true);
 
         gridlist = view.findViewById(R.id.gridlist);
-        verticallist= view.findViewById(R.id.verticallist);
+        verticallist = view.findViewById(R.id.verticallist);
         Offerslist = view.findViewById(R.id.Offerslist);
         mostpopularlist = view.findViewById(R.id.mostpopularlist);
 
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                selectDot(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
         // created new array list..
-        recyclerDataArrayList=new ArrayList<>();
-        verticalArraylist=new ArrayList<>();
-        OffersArraylist=new ArrayList<>();
-        mostpopularArraylist=new ArrayList<>();
+        recyclerDataArrayList = new ArrayList<>();
+        verticalArraylist = new ArrayList<>();
+        OffersArraylist = new ArrayList<>();
+        mostpopularArraylist = new ArrayList<>();
 
         // added data to grid array list
-        recyclerDataArrayList.add(new Recyclerhomemodel("Java","12.00 KWD",R.drawable.custombookimage));
-        recyclerDataArrayList.add(new Recyclerhomemodel("Automation","34.66 KWD",R.drawable.custombookimage));
-        recyclerDataArrayList.add(new Recyclerhomemodel("Manual","77.88 KWD",R.drawable.custombookimage));
-        recyclerDataArrayList.add(new Recyclerhomemodel("Android","56.00 KWD",R.drawable.custombookimage));
-        Gridhomeadapter adapter=new Gridhomeadapter(recyclerDataArrayList,getActivity());
-        LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        recyclerDataArrayList.add(new Recyclerhomemodel("STABILO Swing Cool ", "12.00 KWD", R.drawable.custombookimage));
+        recyclerDataArrayList.add(new Recyclerhomemodel("STABILO Swing Cool ", "34.66 KWD", R.drawable.custombookimage));
+        recyclerDataArrayList.add(new Recyclerhomemodel("STABILO Swing Cool ", "77.88 KWD", R.drawable.custombookimage));
+        recyclerDataArrayList.add(new Recyclerhomemodel("STABILO Swing Cool ", "56.00 KWD", R.drawable.custombookimage));
+        Gridhomeadapter adapter = new Gridhomeadapter(recyclerDataArrayList, getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         gridlist.setLayoutManager(layoutManager);
         adapter.setOnItemClickListener(new Gridhomeadapter.ClickListener() {
             @Override
@@ -92,32 +121,67 @@ public class HomeFragment extends Fragment {
         gridlist.setAdapter(adapter);
 
         // added data to Vertical array list
-        verticalArraylist.add(new BrandModel(R.drawable.custombookimage));
-        verticalArraylist.add(new BrandModel(R.drawable.custombookimage));
-        verticalArraylist.add(new BrandModel(R.drawable.custombookimage));
-        verticalArraylist.add(new BrandModel(R.drawable.custombookimage));
-        BrandAdpter verticaladapter=new BrandAdpter(verticalArraylist,getActivity());
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),2,RecyclerView.HORIZONTAL,false);
+        verticalArraylist.add(new BrandModel(R.drawable.custombrands));
+        verticalArraylist.add(new BrandModel(R.drawable.custombrands));
+        verticalArraylist.add(new BrandModel(R.drawable.custombrands));
+        verticalArraylist.add(new BrandModel(R.drawable.custombrands));
+        verticalArraylist.add(new BrandModel(R.drawable.custombrands));
+        verticalArraylist.add(new BrandModel(R.drawable.custombrands));
+        verticalArraylist.add(new BrandModel(R.drawable.custombrands));
+        BrandAdpter verticaladapter = new BrandAdpter(verticalArraylist, getActivity());
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2, RecyclerView.HORIZONTAL, false);
         verticallist.setLayoutManager(gridLayoutManager);
         verticallist.setAdapter(verticaladapter);
 
         // added data to Offer array list
+        OffersArraylist.add(new Offermodel(R.drawable.offerplaceholder));
         OffersArraylist.add(new Offermodel(R.drawable.custombookimage));
+        OffersArraylist.add(new Offermodel(R.drawable.offerplaceholder));
         OffersArraylist.add(new Offermodel(R.drawable.custombookimage));
-        OffersArraylist.add(new Offermodel(R.drawable.custombookimage));
-        OffersArraylist.add(new Offermodel(R.drawable.custombookimage));
-        Offeradapter offeradapter=new Offeradapter(OffersArraylist,getActivity());
-        LinearLayoutManager offermanager=new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        Offeradapter offeradapter = new Offeradapter(OffersArraylist, getActivity());
+        LinearLayoutManager offermanager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         Offerslist.setLayoutManager(offermanager);
         Offerslist.setAdapter(offeradapter);
 
         // added data to Popular array list
-        mostpopularArraylist.add(new Mostpopularmodel("Java","12.00 KWD",R.drawable.custombookimage));
-        mostpopularArraylist.add(new Mostpopularmodel("Java","12.00 KWD",R.drawable.custombookimage));
-        Mostpopularadapter mostpopularadapter =new Mostpopularadapter(mostpopularArraylist,getActivity());
-        LinearLayoutManager mostpopularmanager=new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        mostpopularArraylist.add(new Mostpopularmodel("Java", "12.00 KWD", R.drawable.custombookimage));
+        mostpopularArraylist.add(new Mostpopularmodel("Java", "12.00 KWD", R.drawable.custombookimage));
+        mostpopularArraylist.add(new Mostpopularmodel("Java", "12.00 KWD", R.drawable.custombookimage));
+        mostpopularArraylist.add(new Mostpopularmodel("Java", "12.00 KWD", R.drawable.custombookimage));
+        Mostpopularadapter mostpopularadapter = new Mostpopularadapter(mostpopularArraylist, getActivity());
+        LinearLayoutManager mostpopularmanager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         mostpopularlist.setLayoutManager(mostpopularmanager);
         mostpopularlist.setAdapter(mostpopularadapter);
         return view;
+    }
+
+    public void addDots() {
+        dots = new ArrayList<>();
+        LinearLayout dotsLayout = getActivity().findViewById(R.id.SliderDots);
+
+
+        for (int i = 0; i < NUM_PAGES; i++) {
+            ImageView dot = new ImageView(getActivity());
+            dot.setImageDrawable(getResources().getDrawable(R.drawable.dots));
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            dotsLayout.addView(dot, params);
+
+            dots.add(dot);
+        }
+
+    }
+
+    public void selectDot(int idx) {
+        Resources res = getResources();
+        for (int i = 0; i < NUM_PAGES; i++) {
+            int drawableId = (i == idx) ? (R.drawable.selecteddots) : (R.drawable.notselected);
+            Drawable drawable = res.getDrawable(drawableId);
+            dots.get(i).setImageDrawable(drawable);
+        }
+
     }
 }

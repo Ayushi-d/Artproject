@@ -9,18 +9,28 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.art_stationary.R;
 
 
-public class CheckoutFragment extends Fragment {
+public class CheckoutFragment extends Fragment implements AdapterView.OnItemSelectedListener {
      TextView txt_edit;
      ConstraintLayout card_alladdress;
      Button button_paynow;
     ConstraintLayout toolbar;
     TextView tooltext;
+    Spinner timespinner;
+
+    String[] time = { "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
+            "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
+            "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM" };
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +49,21 @@ public class CheckoutFragment extends Fragment {
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Checkout");
+
+        Spinner spino = view.findViewById(R.id.timespinner);
+        spino.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());
+
+        ArrayAdapter ad
+                = new ArrayAdapter(
+                getActivity(),
+                android.R.layout.simple_spinner_item,
+                time);
+        ad.setDropDownViewResource(
+                android.R.layout
+                        .simple_spinner_dropdown_item);
+
+        spino.setAdapter(ad);
+
         txt_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,5 +92,18 @@ public class CheckoutFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+       /* Toast.makeText(getActivity(),
+                time[position],
+                Toast.LENGTH_LONG)
+                .show();*/
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
