@@ -49,7 +49,7 @@
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintTop_toBottomOf="@+id/viewPager"
-        android:layout_height="50dp"/>
+        android:layout_height="40dp"/>
 
     <TextView
         android:id="@+id/text_Newarrivals"

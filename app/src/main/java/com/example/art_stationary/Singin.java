@@ -55,7 +55,9 @@ public class Singin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //add confirm input
-                confirmInput(view);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                //confirmInput(view);
             }
         });
         text_forgotpass.setOnClickListener(new View.OnClickListener() {

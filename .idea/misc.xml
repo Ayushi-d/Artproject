@@ -23,6 +23,7 @@
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/toolbar.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/verticalimagecustomlist.xml" value="0.2351851851851852" />
         <entry key="app/src/main/res/drawable/curvebuttombackground.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/round.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_curverectangle.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20989583333333334" />
         <entry key="app/src/main/res/layout/activity_navigate_dots.xml" value="0.1" />
@@ -30,6 +31,7 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/brandlistlayout.xml" value="0.23541666666666666" />
         <entry key="app/src/main/res/layout/customcategorione.xml" value="0.13854166666666667" />
+        <entry key="app/src/main/res/layout/customcolor.xml" value="0.23645833333333333" />
         <entry key="app/src/main/res/layout/custommycard.xml" value="0.23541666666666666" />
         <entry key="app/src/main/res/layout/custommyorders.xml" value="0.20335998535156252" />
         <entry key="app/src/main/res/layout/customorderno.xml" value="0.165" />

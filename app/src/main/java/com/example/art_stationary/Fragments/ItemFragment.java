@@ -86,11 +86,11 @@ public class ItemFragment extends Fragment {
         // added data to grid array list
         recyclercolorarraylist.add(new Colormodel(R.color.grey));
         recyclercolorarraylist.add(new Colormodel(R.color.grey));
+        recyclercolorarraylist.add(new Colormodel(R.color.buttongreen));
         Colorhomeadapter adapter = new Colorhomeadapter(recyclercolorarraylist, getActivity());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         listcolor.setLayoutManager(layoutManager);
         listcolor.setAdapter(adapter);
-
         BottomNavigationView navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
         return view;

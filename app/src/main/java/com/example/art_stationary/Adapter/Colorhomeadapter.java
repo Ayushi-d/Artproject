@@ -1,10 +1,12 @@
 package com.example.art_stationary.Adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.art_stationary.Model.BrandModel;
 import com.example.art_stationary.Model.Colormodel;
@@ -13,6 +15,7 @@ import com.example.art_stationary.R;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Colorhomeadapter extends RecyclerView.Adapter<Colorhomeadapter.RecyclerViewHolder> {
@@ -37,7 +40,9 @@ public class Colorhomeadapter extends RecyclerView.Adapter<Colorhomeadapter.Recy
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
         // Set the data to textview and imageview.
         Colormodel colormodel = Colorarray.get(position);
-        holder.coloroval.setImageResource(colormodel.getColor());
+        Drawable drawable = mcontext.getResources().getDrawable(R.drawable.round);
+        holder.coloroval.setBackground(drawable);
+
     }
 
     @Override
@@ -49,11 +54,12 @@ public class Colorhomeadapter extends RecyclerView.Adapter<Colorhomeadapter.Recy
     // View Holder Class to handle Recycler View.
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView coloroval;
+        private View coloroval;
 
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
             coloroval = itemView.findViewById(R.id.coloroval);
+
         }
     }
 }

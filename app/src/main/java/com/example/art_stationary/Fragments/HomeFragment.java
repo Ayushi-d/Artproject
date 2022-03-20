@@ -45,6 +45,8 @@ public class HomeFragment extends Fragment {
     LinearLayout SliderDots;
     private List<ImageView> dots;
     private final static int NUM_PAGES = 3;
+    LinearLayout dotsLayout;
+
 
 
     private ArrayList<Recyclerhomemodel> recyclerDataArrayList;
@@ -79,6 +81,7 @@ public class HomeFragment extends Fragment {
         verticallist = view.findViewById(R.id.verticallist);
         Offerslist = view.findViewById(R.id.Offerslist);
         mostpopularlist = view.findViewById(R.id.mostpopularlist);
+        dotsLayout = view.findViewById(R.id.SliderDots);
 
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -152,24 +155,23 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager mostpopularmanager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         mostpopularlist.setLayoutManager(mostpopularmanager);
         mostpopularlist.setAdapter(mostpopularadapter);
+        addDots();
         return view;
     }
 
     public void addDots() {
         dots = new ArrayList<>();
-        LinearLayout dotsLayout = getActivity().findViewById(R.id.SliderDots);
 
 
         for (int i = 0; i < NUM_PAGES; i++) {
             ImageView dot = new ImageView(getActivity());
-            dot.setImageDrawable(getResources().getDrawable(R.drawable.dots));
-
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-            );
+            if (i == 0){
+                dot.setImageDrawable(getResources().getDrawable(R.drawable.selecteddots));
+            }else{
+                dot.setImageDrawable(getResources().getDrawable(R.drawable.notselected));
+            }
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(30,30);
             dotsLayout.addView(dot, params);
-
             dots.add(dot);
         }
 
@@ -178,7 +180,7 @@ public class HomeFragment extends Fragment {
     public void selectDot(int idx) {
         Resources res = getResources();
         for (int i = 0; i < NUM_PAGES; i++) {
-            int drawableId = (i == idx) ? (R.drawable.selecteddots) : (R.drawable.notselected);
+                int drawableId = (i == idx) ? (R.drawable.selecteddots) : (R.drawable.notselected);
             Drawable drawable = res.getDrawable(drawableId);
             dots.get(i).setImageDrawable(drawable);
         }
