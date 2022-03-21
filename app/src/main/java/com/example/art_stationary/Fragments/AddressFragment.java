@@ -11,16 +11,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.art_stationary.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AddressFragment extends Fragment {
     ConstraintLayout toolbar;
     TextView tooltext;
+    BottomNavigationView navBar;
+
     public AddressFragment() {
         // Required empty public constructor
     }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,11 @@ public class AddressFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_address, container, false);
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
-        tooltext.setText("Checkout");
+        tooltext.setText("Address");
+
+        navBar = getActivity().findViewById(R.id.bottomNavigationView);
+        navBar.setVisibility(View.GONE);
+
         return view;
     }
 }

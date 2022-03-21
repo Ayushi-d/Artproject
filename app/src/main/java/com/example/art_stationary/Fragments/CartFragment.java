@@ -31,6 +31,7 @@ public class CartFragment extends Fragment {
      Button button_checkout;
      ConstraintLayout toolbar;
      TextView tooltext;
+    BottomNavigationView navBar;
     private ArrayList<Cartmodel> cartmodelArrayList;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,9 @@ public class CartFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_cart, container, false);
         cartlist = view.findViewById(R.id.cartlist);
         button_checkout = view.findViewById(R.id.button_checkout);
+        navBar = getActivity().findViewById(R.id.bottomNavigationView);
+        navBar.setVisibility(View.GONE);
+
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Cart");

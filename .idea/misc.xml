@@ -10,13 +10,27 @@
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_signup.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_splash.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/brandlistlayout.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/customcategorione.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/customcolor.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/custommycard.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/custommyorders.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/customsavedaddress.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/customsize.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_address.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_allcategories.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_cart.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_categories.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_change_password.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_checkout.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_contact_us.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_home.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_item.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_myorderfragment.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_orderno.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_privacypolicy.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_profile.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_saved_address.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_tearmsandcondition.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/gridhomelist.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/iteminto.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/signin.xml" value="0.2351851851851852" />

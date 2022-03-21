@@ -31,6 +31,8 @@
                 android:layout_height="wrap_content"
                 android:text="Stabilo swing cool"
                 android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14dp"
                 android:textColor="@color/black"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_book"
@@ -42,6 +44,9 @@
                 android:layout_height="wrap_content"
                 android:text="10.500 KWD"
                 android:gravity="center"
+                android:fontFamily="@font/popinsbold"
+                android:textSize="15dp"
+                android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/tv_bookname"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"/>

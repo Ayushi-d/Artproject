@@ -152,65 +152,17 @@
                 android:textColor="@color/headingblack"
                 app:layout_constraintTop_toBottomOf="@+id/listcolor"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constsizechart"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclersizrchart"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:background="@drawable/sizechartimage"
                 app:layout_constraintTop_toBottomOf="@id/textselectsize"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="20dp">
-
-                <TextView
-                    android:id="@+id/textmedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:layout_marginLeft="50dp"
-                    android:text="M"/>
-
-                <TextView
-                    android:id="@+id/textsmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintRight_toLeftOf="@id/textlarge"
-                    app:layout_constraintLeft_toRightOf="@id/textmedium"
-                    android:text="S"/>
-
-                <TextView
-                    android:id="@+id/textlarge"
-                    android:layout_width="5dp"
-                    android:layout_height="19dp"
-                    android:text="L"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/textsmall"
-                    app:layout_constraintRight_toLeftOf="@id/textxl"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textxl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    android:layout_marginRight="50dp"
-                    android:text="XL"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_addtocart"
@@ -227,7 +179,7 @@
                 android:background="@drawable/curvebuttombackground"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/constsizechart"/>
+                app:layout_constraintTop_toBottomOf="@id/recyclersizrchart"/>
 
             <TextView
                 android:id="@+id/textdescription"

@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.art_stationary.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class CheckoutFragment extends Fragment implements AdapterView.OnItemSelectedListener {
@@ -25,6 +26,9 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
      Button button_paynow;
     ConstraintLayout toolbar;
     TextView tooltext;
+    BottomNavigationView navBar;
+
+
     Spinner timespinner;
 
     String[] time = { "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
@@ -49,6 +53,9 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Checkout");
+
+        navBar = getActivity().findViewById(R.id.bottomNavigationView);
+        navBar.setVisibility(View.GONE);
 
         Spinner spino = view.findViewById(R.id.timespinner);
         spino.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());

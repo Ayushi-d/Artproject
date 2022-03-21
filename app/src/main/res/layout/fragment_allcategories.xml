@@ -11,18 +11,20 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/grey"
         app:layout_constraintTop_toTopOf="parent"
         app:tabContentStart="32dp"
         app:tabIndicatorAnimationMode="elastic"
-        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorColor="@color/black"
         app:tabIndicatorFullWidth="false"
         app:tabMode="scrollable"
+        android:background="@color/white"
         app:tabPaddingEnd="16dp"
         app:tabPaddingStart="16dp"
         app:tabRippleColor="@android:color/transparent"
         app:tabTextAppearance="?attr/textAppearanceSubtitle1"
-        app:tabTextColor="#000000" />
+        app:tabTextColor="@color/grey"
+        app:tabSelectedTextColor="@color/headingblack"
+        />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"

@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/guidelinetop"
         android:text="Profile"
-        android:textSize="20dp"
+        android:textSize="17dp"
+        android:fontFamily="@font/popinsbold"
         android:textStyle="bold"
         android:textColor="@color/white"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
@@ -34,8 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mohammed Ali Kandori"
-        android:textSize="15dp"
-        android:textStyle="bold"
+        android:textSize="18dp"
+        android:fontFamily="@font/popinsmedium"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/basecard"
         android:layout_marginBottom="30dp"
@@ -67,6 +68,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="16dp"
     android:text="My Orders"/>
 
             <TextView
@@ -80,6 +83,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textmyorder"
                 android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16dp"
                 android:text="My Addresses"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -110,6 +115,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16dp"
                 android:text="Tearms and Condition"/>
 
             <TextView
@@ -123,6 +130,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/texttearmsandcondition"
                 android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16dp"
                 android:text="Privacy policy"/>
 
 
@@ -167,6 +176,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16dp"
                 android:text="Language"/>
 
             <TextView
@@ -180,6 +191,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textlanguage"
                 android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16dp"
                 android:text="Change Password"/>
 
 
@@ -194,6 +207,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textchangepassword"
                 android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16dp"
                 android:text="Contact us"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

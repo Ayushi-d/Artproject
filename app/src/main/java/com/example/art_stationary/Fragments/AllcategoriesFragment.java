@@ -2,6 +2,7 @@ package com.example.art_stationary.Fragments;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
@@ -9,9 +10,11 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.art_stationary.Adapter.Tabcategoriesadapter;
 import com.example.art_stationary.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -23,6 +26,10 @@ public class AllcategoriesFragment extends Fragment {
     private Tabcategoriesadapter pagerAdapter;
     // Arrey of strings FOR TABS TITLES
     private String[] titles = new String[]{"Tab1", "Tab2", "Tab3"};
+    ConstraintLayout toolbar;
+    TextView tooltext;
+    BottomNavigationView navBar;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +42,11 @@ public class AllcategoriesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_allcategories, container, false);
         view_pager = view.findViewById(R.id.view_pager);
+        navBar = getActivity().findViewById(R.id.bottomNavigationView);
+        navBar.setVisibility(View.GONE);
+        toolbar = view.findViewById(R.id.toolbar);
+        tooltext = toolbar.findViewById(R.id.toolheadtext);
+        tooltext.setText("Ink Categories");
         tab_layout= view.findViewById(R.id.tab_layout);
         tab_layout.addTab(tab_layout.newTab().setText("Ink Categories"));
         tab_layout.addTab(tab_layout.newTab().setText("Toner Categories"));

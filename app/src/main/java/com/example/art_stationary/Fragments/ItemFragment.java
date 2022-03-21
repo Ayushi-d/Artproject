@@ -18,9 +18,13 @@ import android.widget.TextView;
 
 import com.example.art_stationary.Adapter.Colorhomeadapter;
 import com.example.art_stationary.Adapter.Gridhomeadapter;
+import com.example.art_stationary.Adapter.Myorderadapter;
+import com.example.art_stationary.Adapter.Sizeadapter;
 import com.example.art_stationary.Global;
 import com.example.art_stationary.Model.Colormodel;
+import com.example.art_stationary.Model.Myordermodel;
 import com.example.art_stationary.Model.Recyclerhomemodel;
+import com.example.art_stationary.Model.Sizemodel;
 import com.example.art_stationary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -31,8 +35,10 @@ public class ItemFragment extends Fragment {
     ImageView img_back;
     RecyclerView listcolor;
     Button button_addtocart;
-    TextView textmedium,textsmall,textlarge,textxl;
     private ArrayList<Colormodel> recyclercolorarraylist;
+    private ArrayList<Sizemodel> sizeArrayList;
+    BottomNavigationView navBar;
+    RecyclerView recyclersizrchart;
 
     public ItemFragment() {
         // Required empty public constructor
@@ -50,17 +56,12 @@ public class ItemFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_item, container, false);
         constraintLayout = view.findViewById(R.id.constraintLayout);
         img_back = view.findViewById(R.id.img_back);
-        textmedium = view.findViewById(R.id.textmedium);
-        textsmall = view.findViewById(R.id.textsmall);
-        textlarge = view.findViewById(R.id.textlarge);
-        textxl = view.findViewById(R.id.textxl);
         listcolor = view.findViewById(R.id.listcolor);
+        recyclersizrchart = view.findViewById(R.id.recyclersizrchart);
         button_addtocart = view.findViewById(R.id.button_addtocart);
-       /* if (textsmall.isSelected()){
-            textsmall.setBackground(R.drawable.sizebackground);
-            textsmall.setTextColor(R.color.white);
-        }else if (textmedium.isSelected())
-        }*/
+
+        navBar = getActivity().findViewById(R.id.bottomNavigationView);
+        navBar.setVisibility(View.GONE);
 
         button_addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +94,18 @@ public class ItemFragment extends Fragment {
         listcolor.setAdapter(adapter);
         BottomNavigationView navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
+
+
+        //size list
+        sizeArrayList=new ArrayList<>();
+        sizeArrayList.add(new Sizemodel("M"));
+        sizeArrayList.add(new Sizemodel("S"));
+        sizeArrayList.add(new Sizemodel("L"));
+        sizeArrayList.add(new Sizemodel("XL"));
+        Sizeadapter sizeadapter=new Sizeadapter(sizeArrayList,getActivity());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        listcolor.setLayoutManager(linearLayoutManager);
+        listcolor.setAdapter(sizeadapter);
         return view;
     }
 }

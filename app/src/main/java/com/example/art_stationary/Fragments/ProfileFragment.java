@@ -1,6 +1,5 @@
 package com.example.art_stationary.Fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,9 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.art_stationary.Activity.MainActivity;
 import com.example.art_stationary.R;
-import com.example.art_stationary.Singin;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class ProfileFragment extends Fragment {
@@ -22,6 +20,8 @@ public class ProfileFragment extends Fragment {
     TextView textrefundpolicy;
     TextView textchangepassword;
     TextView textmyorder;
+    BottomNavigationView navBar;
+
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -38,6 +38,8 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_profile, container, false);
+        navBar = getActivity().findViewById(R.id.bottomNavigationView);
+        navBar.setVisibility(View.GONE);
         texttearmsandcondition =  view.findViewById(R.id.texttearmsandcondition);
         textprivacypolicy = view.findViewById(R.id.textprivacypolicy);
         textrefundpolicy = view.findViewById(R.id.textrefundpolicy);
