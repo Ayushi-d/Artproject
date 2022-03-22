@@ -34,7 +34,7 @@ public class CategoriesFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_categories, container, false);
         click=view.findViewById(R.id.click);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
-        navBar.setVisibility(View.GONE);
+        navBar.setVisibility(View.VISIBLE);
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Categories");

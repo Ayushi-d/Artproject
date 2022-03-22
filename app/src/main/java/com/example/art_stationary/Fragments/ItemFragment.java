@@ -103,9 +103,15 @@ public class ItemFragment extends Fragment {
         sizeArrayList.add(new Sizemodel("L"));
         sizeArrayList.add(new Sizemodel("XL"));
         Sizeadapter sizeadapter=new Sizeadapter(sizeArrayList,getActivity());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        listcolor.setLayoutManager(linearLayoutManager);
-        listcolor.setAdapter(sizeadapter);
+
+        recyclersizrchart.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false){
+            @Override
+            public boolean checkLayoutParams(RecyclerView.LayoutParams lp) {
+                lp.width = getWidth() / 4;
+                return true;
+            }
+        });
+        recyclersizrchart.setAdapter(sizeadapter);
         return view;
     }
 }

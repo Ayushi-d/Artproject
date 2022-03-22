@@ -25,4 +25,5 @@
     <color name="Selectlanguage_border_green">#006633</color>
     <color name="buttongreen">#006633</color>
     <color name="backgroundcolor">#F5F5F5</color>
+    <color name="lightgrey">#EEEEEE</color>
 </resources>

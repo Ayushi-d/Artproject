@@ -39,7 +39,7 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_profile, container, false);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
-        navBar.setVisibility(View.GONE);
+        navBar.setVisibility(View.VISIBLE);
         texttearmsandcondition =  view.findViewById(R.id.texttearmsandcondition);
         textprivacypolicy = view.findViewById(R.id.textprivacypolicy);
         textrefundpolicy = view.findViewById(R.id.textrefundpolicy);

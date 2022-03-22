@@ -48,8 +48,8 @@ public class CartFragment extends Fragment {
         cartlist = view.findViewById(R.id.cartlist);
         button_checkout = view.findViewById(R.id.button_checkout);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
-        navBar.setVisibility(View.GONE);
-
+        navBar.setVisibility(View.VISIBLE);
+        navBar.setSelectedItemId(R.id.cart);
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Cart");

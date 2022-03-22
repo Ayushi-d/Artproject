@@ -41,8 +41,14 @@
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/toolbar.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/verticalimagecustomlist.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/menu/bottommenu.xml" value="0.49320388349514566" />
+        <entry key="app/src/main/res/drawable/bgbottomnavselect.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bottonnavigationbg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/cardviewbackground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/curvebuttombackground.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/customclickbottomnavigationbg.xml" value="0.1215" />
         <entry key="app/src/main/res/drawable/round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/sizebackground.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/sizebg.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_curverectangle.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20989583333333334" />
         <entry key="app/src/main/res/layout/activity_navigate_dots.xml" value="0.1" />
@@ -54,10 +60,13 @@
         <entry key="app/src/main/res/layout/custommycard.xml" value="0.23541666666666666" />
         <entry key="app/src/main/res/layout/custommyorders.xml" value="0.20335998535156252" />
         <entry key="app/src/main/res/layout/customorderno.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/customsize.xml" value="0.20392156862745098" />
         <entry key="app/src/main/res/layout/fragment_address.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_allcategories.xml" value="0.18645833333333334" />
         <entry key="app/src/main/res/layout/fragment_caategory.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.24074074074074073" />
-        <entry key="app/src/main/res/layout/fragment_categoriesone.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.19117647058823528" />
+        <entry key="app/src/main/res/layout/fragment_categoriesone.xml" value="0.1918819188191882" />
         <entry key="app/src/main/res/layout/fragment_categoriestwo.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.21430358886718753" />
         <entry key="app/src/main/res/layout/fragment_checkout.xml" value="0.1" />

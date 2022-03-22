@@ -1,10 +1,13 @@
 package com.example.art_stationary;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 
@@ -20,6 +23,7 @@ public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
 
     private final int mIndicatorHeight = (int) (DP * 8);
 
+
     private final float mIndicatorStrokeWidth = DP * 8;
     private final float mIndicatorItemLength = DP * 8;
 
@@ -28,6 +32,8 @@ public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
     private final Interpolator mInterpolator = new AccelerateDecelerateInterpolator();
 
     private final Paint mPaint = new Paint();
+
+    Context mcntext;
 
     public LinePagerIndicatorDecoration() {
         mPaint.setStrokeCap(Paint.Cap.ROUND);
@@ -48,8 +54,9 @@ public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
         float indicatorTotalWidth = totalLength + paddingBetweenItems;
         float indicatorStartX = (parent.getWidth() - indicatorTotalWidth) / 2F;
 
+
         // center vertically in the allotted space
-        float indicatorPosY = parent.getHeight() - parent.getHeight()/6;
+        float indicatorPosY = parent.getHeight() - Resources.getSystem().getDisplayMetrics().heightPixels/8;
 
         drawInactiveIndicators(c, indicatorStartX, indicatorPosY, itemCount);
 

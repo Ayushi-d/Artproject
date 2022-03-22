@@ -155,11 +155,11 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclersizrchart"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:background="@drawable/sizechartimage"
                 app:layout_constraintTop_toBottomOf="@id/textselectsize"
                 />
