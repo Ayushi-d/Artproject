@@ -22,6 +22,7 @@ import com.example.art_stationary.Model.Cartmodel;
 import com.example.art_stationary.Model.Recyclerhomemodel;
 import com.example.art_stationary.Model.Verticallistmodel;
 import com.example.art_stationary.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,7 @@ public class CartFragment extends Fragment {
      Button button_checkout;
      ConstraintLayout toolbar;
      TextView tooltext;
-    BottomNavigationView navBar;
+     BottomNavigationView navBar;
     private ArrayList<Cartmodel> cartmodelArrayList;
     @Override
     public void onCreate(Bundle savedInstanceState) {

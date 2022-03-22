@@ -19,6 +19,10 @@ import android.widget.Toast;
 import com.example.art_stationary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class CheckoutFragment extends Fragment implements AdapterView.OnItemSelectedListener {
      TextView txt_edit;
@@ -27,14 +31,8 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
     ConstraintLayout toolbar;
     TextView tooltext;
     BottomNavigationView navBar;
-
-
     Spinner timespinner;
-
-    String[] time = { "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
-            "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
-            "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM" };
-
+    ConstraintLayout consspinner;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +46,7 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_checkout, container, false);
         txt_edit=view.findViewById(R.id.txt_edit);
+        consspinner=view.findViewById(R.id.consspinner);
         card_alladdress=view.findViewById(R.id.card_alladdress);
         button_paynow=view.findViewById(R.id.button_paynow);
         toolbar = view.findViewById(R.id.toolbar);
@@ -57,19 +56,25 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
 
-        Spinner spino = view.findViewById(R.id.timespinner);
-        spino.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());
+        timespinner = view.findViewById(R.id.timespinner);
+        String[] time = { "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
+                "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
+                "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM" };
+        final List<String> plantsList = new ArrayList<>(Arrays.asList(time));
 
-        ArrayAdapter ad
-                = new ArrayAdapter(
-                getActivity(),
-                android.R.layout.simple_spinner_item,
-                time);
-        ad.setDropDownViewResource(
-                android.R.layout
-                        .simple_spinner_dropdown_item);
+        // Initializing an ArrayAdapter
+        final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(
+                getActivity(),R.layout.spinner_item,plantsList);
 
-        spino.setAdapter(ad);
+        spinnerArrayAdapter.setDropDownViewResource(R.layout.spinner_item);
+        timespinner.setAdapter(spinnerArrayAdapter);
+        consspinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                timespinner.setSelection(1);
+            }
+        });
 
         txt_edit.setOnClickListener(new View.OnClickListener() {
             @Override

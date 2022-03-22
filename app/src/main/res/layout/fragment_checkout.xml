@@ -160,18 +160,43 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginLeft="5dp"/>
 
-            <Spinner
-                android:id="@+id/timespinner"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/consspinner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
                 android:background="@color/white"
                 android:layout_marginTop="10dp"
-                style="@style/SpinnerTheme"
                 android:layout_marginBottom="2dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textpreffertime"/>
+                app:layout_constraintTop_toBottomOf="@+id/textpreffertime">
+
+                <Spinner
+                    android:id="@+id/timespinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/dropdownimg"
+                    app:layout_constraintTop_toTopOf="@+id/consspinner"
+                    app:layout_constraintBottom_toBottomOf="@+id/consspinner"/>
+
+                <ImageView
+                    android:id="@+id/dropdownimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="@+id/consspinner"
+                    app:layout_constraintTop_toTopOf="@+id/consspinner"
+                    android:src="@drawable/kuwaittest"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/consspinner"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/bgbottomnavselect.xml" value="0.15" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/bottonnavigationbg.xml" value="0.15" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/curvebuttombackground.xml" value="0.15" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/curverectangle.xml" value="0.15" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_main.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_navigate_dots.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_select_language.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_signup.xml" value="0.2351851851851852" />
@@ -34,8 +37,10 @@
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/gridhomelist.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/iteminto.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/signin.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/spinner_item.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/toolbar.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/verticalimagecustomlist.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/menu/bottommenu.xml" value="0.49320388349514566" />
         <entry key="app/src/main/res/drawable/curvebuttombackground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/round.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_curverectangle.xml" value="0.2520833333333333" />
