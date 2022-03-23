@@ -25,7 +25,7 @@ public class AllcategoriesFragment extends Fragment {
     public static TabLayout tab_layout;
     private Tabcategoriesadapter pagerAdapter;
     // Arrey of strings FOR TABS TITLES
-    private String[] titles = new String[]{"Tab1", "Tab2", "Tab3"};
+    private String[] titles = new String[]{"Ink Categories", "Toner Categories", "Type writer"};
     ConstraintLayout toolbar;
     TextView tooltext;
     BottomNavigationView navBar;
@@ -48,9 +48,7 @@ public class AllcategoriesFragment extends Fragment {
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Ink Categories");
         tab_layout= view.findViewById(R.id.tab_layout);
-        tab_layout.addTab(tab_layout.newTab().setText("Ink Categories"));
-        tab_layout.addTab(tab_layout.newTab().setText("Toner Categories"));
-        tab_layout.addTab(tab_layout.newTab().setText("Type writer"));
+
 
         pagerAdapter = new Tabcategoriesadapter(getActivity());
         view_pager.setAdapter(pagerAdapter);

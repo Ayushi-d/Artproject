@@ -29,4 +29,9 @@
     <style name="SpinnerTheme" parent="android:Widget.Spinner">
         <item name="android:background">@drawable/spinnericon</item>
     </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/popinsmedium</item>
+    </style>
 </resources>

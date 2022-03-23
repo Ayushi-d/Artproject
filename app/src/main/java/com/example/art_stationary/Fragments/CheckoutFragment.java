@@ -57,9 +57,9 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
         navBar.setVisibility(View.GONE);
 
         timespinner = view.findViewById(R.id.timespinner);
-        String[] time = { "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
-                "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM",
-                "Evening 4:00 - 5:00 PM", "Evening 4:00 - 5:00 PM" };
+        String[] time = { "Evening 4:00 - 5:00 PM", "Evening 6:00 - 7:00 PM",
+                "Evening 7:00 - 8:00 PM", "Evening 8:00 - 9:00 PM",
+                "Evening 5:00 - 6:00 PM", "Evening 4:30 - 5:50 PM" };
         final List<String> plantsList = new ArrayList<>(Arrays.asList(time));
 
         // Initializing an ArrayAdapter

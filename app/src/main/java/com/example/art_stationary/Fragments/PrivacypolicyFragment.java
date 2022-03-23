@@ -15,9 +15,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PrivacypolicyFragment extends Fragment {
 
+    BottomNavigationView navBar;
+    TextView textView;
     ConstraintLayout toolbar;
     TextView tooltext;
-    BottomNavigationView navBar;
+    ConstraintLayout img_back;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,11 +33,18 @@ public class PrivacypolicyFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_privacypolicy, container, false);
+        img_back =view.findViewById(R.id.img_back);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
-        toolbar = view.findViewById(R.id.toolbar);
-        tooltext = toolbar.findViewById(R.id.toolheadtext);
-        tooltext.setText("Privacy Policy");
+        textView = view.findViewById(R.id.toolheadtext);
+        textView.setText("Privacy Policy");
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
         return view;
     }
 }

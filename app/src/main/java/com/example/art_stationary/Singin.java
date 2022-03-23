@@ -1,12 +1,14 @@
 package com.example.art_stationary;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +23,8 @@ public class Singin extends AppCompatActivity {
     TextView button_signin;
     EditText et_email;
     EditText et_password;
+    ImageView image_back;
+
 
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
@@ -42,6 +46,13 @@ public class Singin extends AppCompatActivity {
         button_signin = findViewById(R.id.button_signin);
         et_email = findViewById(R.id.et_email);
         et_password = findViewById(R.id.et_password);
+        image_back = findViewById(R.id.image_back);
+        image_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         txt_donthaveacc.setOnClickListener(new View.OnClickListener() {
             @Override

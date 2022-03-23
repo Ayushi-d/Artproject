@@ -31,7 +31,7 @@ public class Myorderfragment extends Fragment {
     ConstraintLayout toolbar;
     TextView tooltext;
     BottomNavigationView navBar;
-
+    ConstraintLayout img_back;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class Myorderfragment extends Fragment {
         navBar.setVisibility(View.GONE);
         Myorderslist = view.findViewById(R.id.Myorderslist);
         toolbar = view.findViewById(R.id.toolbar);
+        img_back =view.findViewById(R.id.img_back);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("My Orders");
         myordermodelArrayList=new ArrayList<>();
@@ -68,6 +69,12 @@ public class Myorderfragment extends Fragment {
         });
         Myorderslist.setAdapter(myorderadapter);
 
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
         return view;
     }
 }

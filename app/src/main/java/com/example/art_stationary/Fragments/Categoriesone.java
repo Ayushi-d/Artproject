@@ -3,6 +3,7 @@ package com.example.art_stationary.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -38,14 +39,14 @@ public class Categoriesone extends Fragment {
         categoriesonelist=view.findViewById(R.id.categoriesonelist);
         mycategorimodelArrayList=new ArrayList<>();
 
-        mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.drawable.custombookimage));
+        mycategorimodelArrayList.add(new CategoriesModel("Stabilo swing cool","101550 K",R.drawable.custombookimage));
         mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.drawable.custombookimage));
         mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.drawable.custombookimage));
         mycategorimodelArrayList.add(new CategoriesModel("12333","1234",R.drawable.custombookimage));
 
         Categorioneadapter categorioneadapter=new Categorioneadapter(mycategorimodelArrayList,getActivity());
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        categoriesonelist.setLayoutManager(linearLayoutManager);
+        //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        categoriesonelist.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         categoriesonelist.setAdapter(categorioneadapter);
         return view;
     }

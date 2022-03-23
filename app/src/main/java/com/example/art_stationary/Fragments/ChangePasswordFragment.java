@@ -14,9 +14,11 @@ import com.example.art_stationary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ChangePasswordFragment extends Fragment {
+    BottomNavigationView navBar;
     ConstraintLayout toolbar;
     TextView tooltext;
-    BottomNavigationView navBar;
+    ConstraintLayout img_back;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,11 +31,18 @@ public class ChangePasswordFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_change_password, container, false);
+        img_back =view.findViewById(R.id.img_back);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
-        tooltext.setText("Change Password");
+        tooltext.setText("My Orders");
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
         return view;
     }
 }

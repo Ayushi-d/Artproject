@@ -18,6 +18,7 @@ public class AddressFragment extends Fragment {
     ConstraintLayout toolbar;
     TextView tooltext;
     BottomNavigationView navBar;
+    ConstraintLayout img_back;
 
     public AddressFragment() {
         // Required empty public constructor
@@ -36,10 +37,20 @@ public class AddressFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_address, container, false);
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
+        img_back =view.findViewById(R.id.img_back);
+
         tooltext.setText("Address");
 
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
+
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return view;
     }

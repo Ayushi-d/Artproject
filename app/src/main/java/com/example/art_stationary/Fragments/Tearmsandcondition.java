@@ -19,6 +19,8 @@ public class Tearmsandcondition extends Fragment {
     ConstraintLayout toolbar;
     TextView tooltext;
     BottomNavigationView navBar;
+    ConstraintLayout img_back;
+
 
     public Tearmsandcondition() {
         // Required empty public constructor
@@ -34,12 +36,20 @@ public class Tearmsandcondition extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=  inflater.inflate(R.layout.fragment_tearmsandcondition, container, false);
+        img_back =view.findViewById(R.id.img_back);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
         textView = view.findViewById(R.id.toolheadtext);
         textView.setText("Tearms and Condition");
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
         return view;
 
     }

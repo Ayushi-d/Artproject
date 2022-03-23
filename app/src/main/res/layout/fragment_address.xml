@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Fragments.AddressFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineleft"
@@ -61,8 +71,6 @@
         android:layout_marginTop="20dp"
         android:padding="10dp"
         android:hint="Title"
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -78,8 +86,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Governarate"
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -95,8 +101,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Area"
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -112,8 +116,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Block"
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -129,8 +131,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Street"
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -147,8 +147,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Block"
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -166,8 +164,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Building no."
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -187,8 +183,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Floor no."
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -206,8 +200,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Flat no."
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -224,8 +216,6 @@
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:hint="Direction"
-        android:drawableRight="@drawable/passwordicon"
-        android:paddingRight="10dp"
         android:textColorHint="@color/headingblack"
         android:textSize="14dp"
         android:fontFamily="@font/popinsmedium"
@@ -236,7 +226,7 @@
         app:layout_constraintTop_toBottomOf="@id/et_floorno"/>
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_checkout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -246,9 +236,14 @@
         android:fontFamily="@font/popinsbold"
         android:textStyle="bold"
         android:textSize="17dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/curvebuttombackground"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintTop_toBottomOf="@id/et_direction"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>

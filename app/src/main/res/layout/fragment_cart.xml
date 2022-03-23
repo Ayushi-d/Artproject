@@ -52,12 +52,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:text="Totals"
         android:fontFamily="@font/popinsbold"
         android:textSize="22dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/text_subtotal"
+        app:layout_constraintTop_toBottomOf="@id/guidelinevertical"
         android:textColor="@color/newblack"/>
 
 
@@ -66,11 +66,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:text="Sub total"
         android:textSize="14dp"
         android:fontFamily="@font/poppins_regular"
-        app:layout_constraintBottom_toTopOf="@id/text_shipping"
+        app:layout_constraintTop_toBottomOf="@id/text_totals"
         android:textColor="@color/black"/>
 
     <ImageView
@@ -88,12 +88,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
-        android:layout_marginBottom="20dp"
         android:text="15.000 KWD"
         android:textSize="16dp"
         android:fontFamily="@font/popinsbold"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/text_shippingprice"
+        app:layout_constraintTop_toTopOf="@+id/text_subtotal"
+        app:layout_constraintBottom_toBottomOf="@+id/text_subtotal"
         android:textColor="@color/black"/>
 
 
@@ -105,11 +105,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
-        android:layout_marginBottom="60dp"
+        android:layout_marginTop="20dp"
         android:text="Shipping"
         android:textSize="14dp"
         android:fontFamily="@font/poppins_regular"
-        app:layout_constraintBottom_toTopOf="@id/button_checkout"
+        app:layout_constraintTop_toBottomOf="@id/text_subtotal"
         android:textColor="@color/black"/>
 
     <ImageView
@@ -127,12 +127,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
-        android:layout_marginBottom="60dp"
         android:text="00.000 KWD"
         android:textSize="16dp"
         android:fontFamily="@font/popinsbold"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/button_checkout"
+        app:layout_constraintTop_toTopOf="@id/text_shipping"
+        app:layout_constraintBottom_toBottomOf="@+id/text_shipping"
         android:textColor="@color/black"/>
 
 
@@ -145,11 +145,11 @@
         android:textStyle="bold"
         android:fontFamily="@font/popinsbold"
         android:backgroundTint="@color/buttongreen"
-        android:layout_marginTop="30dp"
         android:background="@drawable/curvebuttombackground"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

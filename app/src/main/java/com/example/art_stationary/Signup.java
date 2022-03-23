@@ -1,6 +1,7 @@
 package com.example.art_stationary;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,8 @@ public class Signup extends AppCompatActivity {
      EditText et_password;
      EditText et_name;
      Button button_signup;
+     ImageView image_back;
+
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     //"(?=.*[0-9])" +
@@ -47,6 +51,13 @@ public class Signup extends AppCompatActivity {
             public void onClick(View view) {
               //add confirm input
                 confirmInput(view);
+            }
+        });
+        image_back =findViewById(R.id.image_back);
+        image_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
         text_haveacc = findViewById(R.id.text_haveacc);

@@ -2,6 +2,7 @@ package com.example.art_stationary.Fragments;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -20,13 +21,12 @@ public class ProfileFragment extends Fragment {
     TextView textrefundpolicy;
     TextView textchangepassword;
     TextView textmyorder;
+    TextView textaddress;
     BottomNavigationView navBar;
-
 
     public ProfileFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class ProfileFragment extends Fragment {
         textrefundpolicy = view.findViewById(R.id.textrefundpolicy);
         textchangepassword = view.findViewById(R.id.textchangepassword);
         textmyorder = view.findViewById(R.id.textmyorder);
+        textaddress = view.findViewById(R.id.textaddress);
 
 
         texttearmsandcondition.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +53,13 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 Tearmsandcondition tearmsandcondition = new Tearmsandcondition();
                 replaceFr(tearmsandcondition);
+            }
+        });
+        textaddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AddressFragment addressFragment = new AddressFragment();
+                replaceFr(addressFragment);
             }
         });
 

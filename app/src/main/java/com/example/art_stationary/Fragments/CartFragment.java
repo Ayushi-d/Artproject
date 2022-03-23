@@ -33,6 +33,8 @@ public class CartFragment extends Fragment {
      ConstraintLayout toolbar;
      TextView tooltext;
      BottomNavigationView navBar;
+     ConstraintLayout img_back;
+
     private ArrayList<Cartmodel> cartmodelArrayList;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class CartFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_cart, container, false);
         cartlist = view.findViewById(R.id.cartlist);
+        img_back =view.findViewById(R.id.img_back);
         button_checkout = view.findViewById(R.id.button_checkout);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.VISIBLE);
@@ -60,6 +63,12 @@ public class CartFragment extends Fragment {
                 ft.replace(R.id.flFragment, new CheckoutFragment(), "NewFragmentTag");
                 ft.commit();
                 ft.addToBackStack(null);
+            }
+        });
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
             }
         });
         cartmodelArrayList=new ArrayList<>();
