@@ -21,7 +21,7 @@ public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
 
     private static final float DP = Resources.getSystem().getDisplayMetrics().density;
 
-    private final int mIndicatorHeight = (int) (DP * 8);
+    private final int mIndicatorHeight = (int) (DP * 16);
 
 
     private final float mIndicatorStrokeWidth = DP * 8;
@@ -54,13 +54,10 @@ public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
         float indicatorTotalWidth = totalLength + paddingBetweenItems;
         float indicatorStartX = (parent.getWidth() - indicatorTotalWidth) / 2F;
 
-
         // center vertically in the allotted space
-        float indicatorPosY = parent.getHeight() - Resources.getSystem().getDisplayMetrics().heightPixels/8;
+        float indicatorPosY = parent.getHeight() - mIndicatorHeight;
 
         drawInactiveIndicators(c, indicatorStartX, indicatorPosY, itemCount);
-
-
         // find active page (which should be highlighted)
         LinearLayoutManager layoutManager = (LinearLayoutManager) parent.getLayoutManager();
         int activePosition = layoutManager.findFirstVisibleItemPosition();

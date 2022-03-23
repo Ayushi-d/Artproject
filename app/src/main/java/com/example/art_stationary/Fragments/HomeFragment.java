@@ -167,10 +167,12 @@ public class HomeFragment extends Fragment {
             ImageView dot = new ImageView(getActivity());
             if (i == 0){
                 dot.setImageDrawable(getResources().getDrawable(R.drawable.selecteddots));
+
             }else{
                 dot.setImageDrawable(getResources().getDrawable(R.drawable.notselected));
             }
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(30,30);
+            params.setMargins(8,0,8,0);
             dotsLayout.addView(dot, params);
             dots.add(dot);
         }
