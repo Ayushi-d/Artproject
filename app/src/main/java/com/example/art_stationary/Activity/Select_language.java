@@ -1,4 +1,4 @@
-package com.example.art_stationary;
+package com.example.art_stationary.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.art_stationary.Utils.Gloabal_View;
+import com.example.art_stationary.R;
 
 public class Select_language extends AppCompatActivity {
 
@@ -18,6 +21,8 @@ public class Select_language extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_language);
+        Gloabal_View.statusbar(Select_language.this);
+
         iconurdu = findViewById(R.id.iconurdu);
         iconeng = findViewById(R.id.iconeng);
         textenglishh = findViewById(R.id.textenglishh);

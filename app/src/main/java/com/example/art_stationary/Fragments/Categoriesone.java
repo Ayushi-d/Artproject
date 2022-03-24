@@ -1,7 +1,9 @@
 package com.example.art_stationary.Fragments;
 
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -31,11 +33,14 @@ public class Categoriesone extends Fragment {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_categoriesone, container, false);
+        getActivity().getWindow().setStatusBarColor(getActivity().getColor(R.color.black));
+
         categoriesonelist=view.findViewById(R.id.categoriesonelist);
         mycategorimodelArrayList=new ArrayList<>();
 

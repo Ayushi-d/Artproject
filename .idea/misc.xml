@@ -7,6 +7,9 @@
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/bottonnavigationbg.xml" value="0.15" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/curvebuttombackground.xml" value="0.15" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/curverectangle.xml" value="0.15" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/drawable/drawable_cursor.xml" value="0.15" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_forgot_password.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_main.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_navigate_dots.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/activity_select_language.xml" value="0.2351851851851852" />
@@ -33,6 +36,7 @@
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_privacypolicy.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_profile.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_saved_address.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_search.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/fragment_tearmsandcondition.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/gridhomelist.xml" value="0.2351851851851852" />
         <entry key="..\:/Users/Lenovo/Desktop/Artproject/app/src/main/res/layout/iteminto.xml" value="0.27447916666666666" />

@@ -38,14 +38,27 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.6" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cartlist"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintBottom_toTopOf="@id/guidelinevertical"
-        app:layout_constraintRight_toRightOf="@id/guidelineright"/>
+        app:layout_constraintRight_toRightOf="@id/guidelineright">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartlist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
+            app:layout_constraintBottom_toTopOf="@id/guidelinevertical"
+            app:layout_constraintRight_toRightOf="@id/guidelineright"/>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
     <TextView
         android:id="@+id/text_totals"

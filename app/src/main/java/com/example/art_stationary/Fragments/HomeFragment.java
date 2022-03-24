@@ -2,8 +2,10 @@ package com.example.art_stationary.Fragments;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -16,20 +18,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.art_stationary.Adapter.BrandAdpter;
 import com.example.art_stationary.Adapter.Gridhomeadapter;
 import com.example.art_stationary.Adapter.Mostpopularadapter;
 import com.example.art_stationary.Adapter.Offeradapter;
-import com.example.art_stationary.Adapter.Verticalhomeadapter;
 import com.example.art_stationary.Adapter.ViewPagerAdapter;
-import com.example.art_stationary.Global;
 import com.example.art_stationary.Model.BrandModel;
 import com.example.art_stationary.Model.Mostpopularmodel;
 import com.example.art_stationary.Model.Offermodel;
 import com.example.art_stationary.Model.Recyclerhomemodel;
-import com.example.art_stationary.Model.Verticallistmodel;
 import com.example.art_stationary.R;
+import com.example.art_stationary.Utils.Gloabal_View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -46,6 +47,8 @@ public class HomeFragment extends Fragment {
     private List<ImageView> dots;
     private final static int NUM_PAGES = 3;
     LinearLayout dotsLayout;
+    ImageView imagesearch;
+    TextView text_viewall;
 
 
 
@@ -63,11 +66,13 @@ public class HomeFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        getActivity().getWindow().setStatusBarColor(getActivity().getColor(R.color.black));
         viewPager = view.findViewById(R.id.viewPager);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getActivity());
         viewPager.setAdapter(viewPagerAdapter);
@@ -77,6 +82,8 @@ public class HomeFragment extends Fragment {
        // addDots();
         //Global.instance.showhidebottomNav(view,true);
 
+        text_viewall = view.findViewById(R.id.text_viewall);
+        imagesearch = view.findViewById(R.id.imagesearch);
         gridlist = view.findViewById(R.id.gridlist);
         verticallist = view.findViewById(R.id.verticallist);
         Offerslist = view.findViewById(R.id.Offerslist);
@@ -156,6 +163,20 @@ public class HomeFragment extends Fragment {
         mostpopularlist.setLayoutManager(mostpopularmanager);
         mostpopularlist.setAdapter(mostpopularadapter);
         addDots();
+
+        text_viewall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Gloabal_View.changeFragment(getActivity(), new ViewAllFragment());
+
+            }
+        });
+        imagesearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Gloabal_View.changeFragment(getActivity(), new SearchFragment());
+            }
+        });
         return view;
     }
 

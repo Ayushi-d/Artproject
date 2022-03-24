@@ -1,12 +1,15 @@
 package com.example.art_stationary.Fragments;
 
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +37,8 @@ public class CartFragment extends Fragment {
      TextView tooltext;
      BottomNavigationView navBar;
      ConstraintLayout img_back;
+    SwipeRefreshLayout swipe_list;
+
 
     private ArrayList<Cartmodel> cartmodelArrayList;
     @Override
@@ -42,11 +47,14 @@ public class CartFragment extends Fragment {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_cart, container, false);
+        getActivity().getWindow().setStatusBarColor(getActivity().getColor(R.color.black));
+        swipe_list = view.findViewById(R.id.swipe_list);
         cartlist = view.findViewById(R.id.cartlist);
         img_back =view.findViewById(R.id.img_back);
         button_checkout = view.findViewById(R.id.button_checkout);
@@ -96,6 +104,12 @@ public class CartFragment extends Fragment {
         });
         cartlist.setAdapter(mycartadapter);
 
+        swipe_list.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipe_list.setRefreshing(false);
+            }
+        });
 
         return view;
     }

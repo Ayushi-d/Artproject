@@ -10,7 +10,7 @@ import com.example.art_stationary.Fragments.CartFragment;
 import com.example.art_stationary.Fragments.CategoriesFragment;
 import com.example.art_stationary.Fragments.HomeFragment;
 import com.example.art_stationary.Fragments.ProfileFragment;
-import com.example.art_stationary.Fragments.AllcategoriesFragment;
+import com.example.art_stationary.Utils.Gloabal_View;
 import com.example.art_stationary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Gloabal_View.statusbar(MainActivity.this);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(this::onNavigationItemSelected);

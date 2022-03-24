@@ -1,7 +1,6 @@
-package com.example.art_stationary;
+package com.example.art_stationary.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.art_stationary.Activity.ForgotPassword;
-import com.example.art_stationary.Activity.MainActivity;
+import com.example.art_stationary.Utils.Gloabal_View;
+import com.example.art_stationary.R;
 
 import java.util.regex.Pattern;
 
@@ -41,6 +40,8 @@ public class Singin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
+        Gloabal_View.statusbar(Singin.this);
+
         txt_donthaveacc = findViewById(R.id.txt_donthaveacc);
         text_forgotpass = findViewById(R.id.text_forgotpass);
         button_signin = findViewById(R.id.button_signin);
@@ -65,10 +66,7 @@ public class Singin extends AppCompatActivity {
         button_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //add confirm input
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                //confirmInput(view);
+                confirmInput(view);
             }
         });
         text_forgotpass.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +117,7 @@ public class Singin extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
 
-        Toast.makeText(this, input, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT).show();
     }
 
 }

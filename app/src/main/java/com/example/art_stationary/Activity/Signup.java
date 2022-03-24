@@ -1,11 +1,9 @@
-package com.example.art_stationary;
+package com.example.art_stationary.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.art_stationary.Activity.MainActivity;
+import com.example.art_stationary.Utils.Gloabal_View;
+import com.example.art_stationary.R;
 
 import java.util.regex.Pattern;
 
@@ -24,6 +23,7 @@ public class Signup extends AppCompatActivity {
      EditText et_email;
      EditText et_password;
      EditText et_name;
+     EditText et_confirmpassword;
      Button button_signup;
      ImageView image_back;
 
@@ -41,9 +41,11 @@ public class Signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        Gloabal_View.statusbar(Signup.this);
 
         et_email = findViewById(R.id.et_email);
         et_password = findViewById(R.id.et_password);
+        et_confirmpassword = findViewById(R.id.et_confirmpassword);
         et_name = findViewById(R.id.et_name);
         button_signup = findViewById(R.id.button_signup);
         button_signup.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +80,8 @@ public class Signup extends AppCompatActivity {
         } else if (!Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()) {
             et_email.setError("Please enter a valid email address");
             return false;
-        } else {
+        }
+        else {
             et_email.setError(null);
             return true;
         }
@@ -98,6 +101,20 @@ public class Signup extends AppCompatActivity {
             return true;
         }
     }
+    public boolean validate(){
+        String passwordInput = et_password.getText().toString().trim();
+        String passwordconfInput = et_confirmpassword.getText().toString().trim();
+        boolean temp=true;
+
+        if (!PASSWORD_PATTERN.matcher(passwordInput).matches()) {
+            et_password.setError("Password too weak");
+            return false;
+        }else if(!passwordInput.equals(passwordconfInput)){
+            Toast.makeText(this,"Password Not matching",Toast.LENGTH_SHORT).show();
+            temp=false;
+        }
+        return temp;
+    }
 
     private boolean validatePassword() {
         String passwordInput = et_password.getText().toString().trim();
@@ -108,8 +125,8 @@ public class Signup extends AppCompatActivity {
         } else if (!PASSWORD_PATTERN.matcher(passwordInput).matches()) {
             et_password.setError("Password too weak");
             return false;
-        } else {
-            et_password.setError(null);
+
+        }else {
             return true;
         }
     }
@@ -117,16 +134,17 @@ public class Signup extends AppCompatActivity {
     public void confirmInput(View v) {
         if (!validateEmail() | !validateUsername() | !validatePassword()) {
             return;
+
+        }else if (validate()){
+            String input = "Email: " + et_email.getText().toString();
+            input += "\n";
+            input += "Username: " + et_name.getText().toString();
+            input += "\n";
+            input += "Password: " + et_password.getText().toString();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, "Registration sucessfull", Toast.LENGTH_SHORT).show();
+
         }
-
-        String input = "Email: " + et_email.getText().toString();
-        input += "\n";
-        input += "Username: " + et_name.getText().toString();
-        input += "\n";
-        input += "Password: " + et_password.getText().toString();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-
-        Toast.makeText(this, input, Toast.LENGTH_SHORT).show();
     }
 }

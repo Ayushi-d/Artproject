@@ -1,7 +1,6 @@
 package com.example.art_stationary.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,12 +9,10 @@ import android.widget.TextView;
 
 import com.example.art_stationary.Model.Recyclerhomemodel;
 import com.example.art_stationary.R;
-import com.example.art_stationary.Signup;
 
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Gridhomeadapter extends RecyclerView.Adapter<Gridhomeadapter.RecyclerViewHolder>{

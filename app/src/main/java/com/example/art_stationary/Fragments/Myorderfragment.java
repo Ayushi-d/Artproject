@@ -1,13 +1,16 @@
 
 package com.example.art_stationary.Fragments;
 
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +30,7 @@ import java.util.ArrayList;
 
 public class Myorderfragment extends Fragment {
     RecyclerView Myorderslist;
+    SwipeRefreshLayout swipe_list;
     private ArrayList<Myordermodel> myordermodelArrayList;
     ConstraintLayout toolbar;
     TextView tooltext;
@@ -39,14 +43,18 @@ public class Myorderfragment extends Fragment {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_myorderfragment, container, false);
+        getActivity().getWindow().setStatusBarColor(getActivity().getColor(R.color.black));
+        swipe_list = getActivity().findViewById(R.id.swipe_list);
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
         Myorderslist = view.findViewById(R.id.Myorderslist);
+        swipe_list = view.findViewById(R.id.swipe_list);
         toolbar = view.findViewById(R.id.toolbar);
         img_back =view.findViewById(R.id.img_back);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
@@ -73,6 +81,12 @@ public class Myorderfragment extends Fragment {
             @Override
             public void onClick(View view) {
                 getActivity().onBackPressed();
+            }
+        });
+        swipe_list.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipe_list.setRefreshing(false);
             }
         });
         return view;

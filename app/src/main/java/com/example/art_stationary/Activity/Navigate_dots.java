@@ -1,30 +1,20 @@
-package com.example.art_stationary;
+package com.example.art_stationary.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 
-import com.example.art_stationary.Adapter.Mostpopularadapter;
 import com.example.art_stationary.Adapter.Pageradapter;
+import com.example.art_stationary.Utils.Gloabal_View;
 import com.example.art_stationary.Model.IntroModel;
-import com.example.art_stationary.Model.Mostpopularmodel;
-import com.example.art_stationary.Model.Recyclerhomemodel;
-import com.google.android.material.progressindicator.LinearProgressIndicator;
+import com.example.art_stationary.R;
 
 import java.util.ArrayList;
 
@@ -37,6 +27,8 @@ public class Navigate_dots extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigate_dots);
+        Gloabal_View.statusbar(Navigate_dots.this);
+
         banner_view = findViewById(R.id.banner_view);
         btn_next = findViewById(R.id.btn_next);
 

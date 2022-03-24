@@ -13,22 +13,22 @@
             android:name=".Activity.ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".Navigate_dots"
+            android:name=".Activity.Navigate_dots"
             android:exported="false" />
         <activity
-            android:name=".Select_language"
+            android:name=".Activity.Select_language"
             android:exported="false" />
         <activity
             android:name=".Activity.Login"
             android:exported="false" />
         <activity
-            android:name=".Singin"
+            android:name=".Activity.Singin"
             android:exported="false" />
         <activity
-            android:name=".Signup"
+            android:name=".Activity.Signup"
             android:exported="false" />
         <activity
-            android:name=".Splash"
+            android:name=".Activity.Splash"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

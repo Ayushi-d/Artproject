@@ -205,6 +205,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginLeft="20dp"
                 android:textSize="17dp"
+                android:textCursorDrawable="@drawable/drawable_cursor"
                 android:fontFamily="@font/nutinonormal"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/grey"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/backgroundcolor"
     android:layout_height="match_parent"
-    tools:context=".Signup">
+    tools:context=".Activity.Signup">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -59,6 +59,7 @@
         android:drawableRight="@drawable/usericon"
         android:paddingRight="10dp"
         android:hint="Name"
+        android:textCursorDrawable="@drawable/drawable_cursor"
         android:inputType="text"
         android:singleLine="true"
         android:textColor="@color/black"
@@ -79,6 +80,7 @@
         android:textColor="@color/black"
         android:drawableRight="@drawable/emailiconsignup"
         android:paddingRight="10dp"
+        android:textCursorDrawable="@drawable/drawable_cursor"
         android:inputType="textEmailAddress"
         android:singleLine="true"
         android:hint="Email"
@@ -99,8 +101,9 @@
         android:textColor="@color/black"
         android:drawableRight="@drawable/mobileicon"
         android:paddingRight="10dp"
+        android:textCursorDrawable="@drawable/drawable_cursor"
         android:inputType="phone"
-        android:maxEms="12"
+        android:maxLength="12"
         android:hint="Mobile"
         android:fontFamily="@font/poppins_regular"
         android:textColorHint="@color/headingblack"
@@ -118,6 +121,7 @@
         android:layout_marginTop="10dp"
         android:drawableRight="@drawable/lockicon"
         android:paddingRight="10dp"
+        android:textCursorDrawable="@drawable/drawable_cursor"
         android:singleLine="true"
         android:hint="Password"
         android:fontFamily="@font/poppins_regular"
@@ -138,6 +142,7 @@
         android:drawableRight="@drawable/lockicon"
         android:paddingRight="10dp"
         android:hint="Confirm Password"
+        android:textCursorDrawable="@drawable/drawable_cursor"
         android:singleLine="true"
         android:fontFamily="@font/poppins_regular"
         android:textColorHint="@color/headingblack"

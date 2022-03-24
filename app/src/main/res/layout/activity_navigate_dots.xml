@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".Navigate_dots">
+    tools:context=".Activity.Navigate_dots">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/banner_view"

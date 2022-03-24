@@ -1,9 +1,7 @@
 package com.example.art_stationary.Fragments;
 
-import android.os.Build;
 import android.os.Bundle;
 
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,7 +10,10 @@ import android.view.ViewGroup;
 
 import com.example.art_stationary.R;
 
-public class Categoiesthree extends Fragment {
+
+public class SearchFragment extends Fragment {
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -20,13 +21,10 @@ public class Categoiesthree extends Fragment {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v =inflater.inflate(R.layout.fragment_categoiesthree, container, false);
-        getActivity().getWindow().setStatusBarColor(getActivity().getColor(R.color.black));
-        return v;
+        return inflater.inflate(R.layout.fragment_search, container, false);
     }
 }
