@@ -20,6 +20,7 @@ import com.example.art_stationary.Adapter.Savedaddressadapter;
 import com.example.art_stationary.Model.OrdernoModel;
 import com.example.art_stationary.Model.Savedaddressmodel;
 import com.example.art_stationary.R;
+import com.example.art_stationary.Utils.Gloabal_View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -67,10 +68,8 @@ public class SavedAddressFragment extends Fragment {
         txt_editaddrress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.flFragment, new AddressFragment(), "NewFragmentTag");
-                ft.commit();
-                ft.addToBackStack(null);
+                Gloabal_View.changeFragment(getActivity(), new AddressFragment());
+
             }
         });
         return view;

@@ -122,10 +122,8 @@ public class HomeFragment extends Fragment {
         adapter.setOnItemClickListener(new Gridhomeadapter.ClickListener() {
             @Override
             public void onItemClick(int position, View v) {
-                final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.flFragment, new ItemFragment(), "NewFragmentTag");
-                ft.commit();
-                ft.addToBackStack(null);
+                Gloabal_View.changeFragment(getActivity(), new ItemFragment());
+
             }
         });
         gridlist.setAdapter(adapter);
@@ -188,7 +186,6 @@ public class HomeFragment extends Fragment {
             ImageView dot = new ImageView(getActivity());
             if (i == 0){
                 dot.setImageDrawable(getResources().getDrawable(R.drawable.selecteddots));
-
             }else{
                 dot.setImageDrawable(getResources().getDrawable(R.drawable.notselected));
             }

@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.art_stationary.R;
+import com.example.art_stationary.Utils.Gloabal_View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -55,57 +56,51 @@ public class ProfileFragment extends Fragment {
         texttearmsandcondition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Tearmsandcondition tearmsandcondition = new Tearmsandcondition();
-                replaceFr(tearmsandcondition);
+                Gloabal_View.changeFragment(getActivity(), new Tearmsandcondition());
+
             }
         });
         textaddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AddressFragment addressFragment = new AddressFragment();
-                replaceFr(addressFragment);
+                Gloabal_View.changeFragment(getActivity(), new AddressFragment());
+
             }
         });
 
         textprivacypolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PrivacypolicyFragment privacypolicyFragment = new PrivacypolicyFragment();
-                replaceFr(privacypolicyFragment);
+                Gloabal_View.changeFragment(getActivity(), new PrivacypolicyFragment());
+
             }
         });
 
         textrefundpolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Refundfragment refundfragment = new Refundfragment();
-                replaceFr(refundfragment);
+                Gloabal_View.changeFragment(getActivity(), new Refundfragment());
+
             }
         });
 
         textchangepassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ChangePasswordFragment changePasswordFragment = new ChangePasswordFragment();
-                replaceFr(changePasswordFragment);
+                Gloabal_View.changeFragment(getActivity(), new ChangePasswordFragment());
+
             }
         });
 
         textmyorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Myorderfragment myorderfragment = new Myorderfragment();
-                replaceFr(myorderfragment);
+                Gloabal_View.changeFragment(getActivity(), new Myorderfragment());
+
             }
         });
 
         return view;
     }
 
-    public void replaceFr(Fragment fragment){
-        final FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.flFragment, fragment, "NewFragmentTag");
-        ft.commit();
-        ft.addToBackStack(null);
-    }
 }

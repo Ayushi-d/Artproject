@@ -25,6 +25,7 @@ import com.example.art_stationary.Model.Cartmodel;
 import com.example.art_stationary.Model.Recyclerhomemodel;
 import com.example.art_stationary.Model.Verticallistmodel;
 import com.example.art_stationary.R;
+import com.example.art_stationary.Utils.Gloabal_View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -67,10 +68,8 @@ public class CartFragment extends Fragment {
         button_checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.flFragment, new CheckoutFragment(), "NewFragmentTag");
-                ft.commit();
-                ft.addToBackStack(null);
+                Gloabal_View.changeFragment(getActivity(), new CheckoutFragment());
+
             }
         });
         img_back.setOnClickListener(new View.OnClickListener() {
@@ -96,10 +95,8 @@ public class CartFragment extends Fragment {
         mycartadapter.setOnItemClickListener(new Gridhomeadapter.ClickListener() {
             @Override
             public void onItemClick(int position, View v) {
-                final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.flFragment, new ItemFragment(), "NewFragmentTag");
-                ft.commit();
-                ft.addToBackStack(null);
+                Gloabal_View.changeFragment(getActivity(), new ItemFragment());
+
             }
         });
         cartlist.setAdapter(mycartadapter);

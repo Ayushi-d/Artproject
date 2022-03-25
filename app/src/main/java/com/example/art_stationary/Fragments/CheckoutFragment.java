@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.art_stationary.R;
+import com.example.art_stationary.Utils.Gloabal_View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -83,28 +84,22 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
         txt_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.flFragment, new AddressFragment(), "NewFragmentTag");
-                ft.commit();
-                ft.addToBackStack(null);
+                Gloabal_View.changeFragment(getActivity(), new AddressFragment());
+
             }
         });
         button_paynow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.flFragment, new ThankyouFragment(), "NewFragmentTag");
-                ft.commit();
-                ft.addToBackStack(null);
+                Gloabal_View.changeFragment(getActivity(), new ThankyouFragment());
+
             }
         });
         card_alladdress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.flFragment, new SavedAddressFragment(), "NewFragmentTag");
-                ft.commit();
-                ft.addToBackStack(null);
+                Gloabal_View.changeFragment(getActivity(), new SavedAddressFragment());
+
             }
         });
         return view;
