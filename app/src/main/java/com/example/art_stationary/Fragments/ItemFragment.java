@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.art_stationary.Adapter.Colorhomeadapter;
 import com.example.art_stationary.Adapter.Sizeadapter;
@@ -64,14 +65,16 @@ public class ItemFragment extends Fragment {
         button_addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Gloabal_View.changeFragment(getActivity(), new CartFragment());
+                //Gloabal_View.changeFragment(getActivity(), new CartFragment());
+                Toast.makeText(getActivity(), "Added to Cart Successfully", Toast.LENGTH_SHORT).show();
+
 
             }
         });
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Gloabal_View.changeFragment(getActivity(), new HomeFragment());
+                getActivity().onBackPressed();
 
             }
         });

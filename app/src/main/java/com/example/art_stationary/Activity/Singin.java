@@ -116,6 +116,7 @@ public class Singin extends AppCompatActivity {
         input += "Password: " + et_password.getText().toString();
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
+        finish();
 
         Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT).show();
     }

@@ -156,6 +156,8 @@
         android:text="Checkout"
         android:textSize="17dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
+
         android:fontFamily="@font/popinsbold"
         android:backgroundTint="@color/buttongreen"
         android:background="@drawable/curvebuttombackground"

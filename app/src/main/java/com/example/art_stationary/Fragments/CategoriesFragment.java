@@ -12,18 +12,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.example.art_stationary.Adapter.ExpandAdapter;
+import com.example.art_stationary.Adapter.ThreeCatAdapter;
 import com.example.art_stationary.Model.ExpandedCategroryModel;
 import com.example.art_stationary.Model.ParentCategoryModel;
 import com.example.art_stationary.Model.SubCatModel;
 import com.example.art_stationary.Model.SubCategoryModel;
+import com.example.art_stationary.Model.ThreeCatModel;
 import com.example.art_stationary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 public class CategoriesFragment extends Fragment {
 
@@ -32,12 +37,74 @@ public class CategoriesFragment extends Fragment {
     BottomNavigationView navBar;
     ConstraintLayout img_back;
     RecyclerView categoryRecyler;
+    ExpandableListView expandableList;
 
-    private ArrayList<ParentCategoryModel> expandedCategroryModelArrayList;
-    private ArrayList<SubCatModel> subCategoryModels;
-    private ArrayList<SubCatModel> subCategoryModels1;
-    private ArrayList<SubCatModel> subCategoryModels2;
-    private static String[] parentCategoryArray;
+    String[] parent = new String[]{"Office Supplies", "Office Supplies"};
+
+    String[] movies = new String[]{"Ink Toner", "Paper", "Presentation", "Envelop"};
+
+    String[] games = new String[]{};
+
+    /**
+     * The Horror movie list.
+     */
+    // movies category has further genres
+    String[] horror = new String[]{};
+    /**
+     * The Action Movies List.
+     */
+    String[] action = new String[]{};
+    /**
+     * The Thriller Movies List.
+     */
+    String[] thriller = new String[]{};
+
+    String[] envelop = new String[]{"Envelop", "Envelop", "Envelop"};
+
+
+    /**
+     * The Fps games.
+     */
+    // games category has further genres
+    String[] fps = new String[]{"CS: GO", "Team Fortress 2", "Overwatch", "Battlefield 1", "Halo II", "Warframe"};
+    /**
+     * The Moba games.
+     */
+    String[] moba = new String[]{"Dota 2", "League of Legends", "Smite", "Strife", "Heroes of the Storm"};
+    /**
+     * The Rpg games.
+     */
+    String[] rpg = new String[]{"Witcher III", "Skyrim", "Warcraft", "Mass Effect II", "Diablo", "Dark Souls", "Last of Us"};
+    /**
+     * The Racing games.
+     */
+    String[] racing = new String[]{"NFS: Most Wanted", "Forza Motorsport 3", "EA: F1 2016", "Project Cars"};
+
+
+    LinkedHashMap<String, String[]> thirdLevelMovies = new LinkedHashMap<>();
+    /**
+     * Datastructure for Third level games.
+     */
+    LinkedHashMap<String, String[]> thirdLevelGames = new LinkedHashMap<>();
+
+    /**
+     * Datastructure for Third level Serials.
+     */
+    // LinkedHashMap<String, String[]> thirdLevelSerials = new LinkedHashMap<>();
+
+
+    /**
+     * The Second level.
+     */
+    List<String[]> secondLevel = new ArrayList<>();
+
+
+    /**
+     * The Data.
+     */
+    List<LinkedHashMap<String, String[]>> data = new ArrayList<>();
+
+
 
 
     @Override
@@ -60,6 +127,7 @@ public class CategoriesFragment extends Fragment {
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Categories");
         categoryRecyler = view.findViewById(R.id.categoryRecyler);
+        expandableList = view.findViewById(R.id.expandableList);
 
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,36 +136,57 @@ public class CategoriesFragment extends Fragment {
             }
         });
 
+        // second level category names (genres)
+        secondLevel.add(movies);
+        secondLevel.add(games);
+        // secondLevel.add(serials);
 
-        expandedCategroryModelArrayList = new ArrayList<>();
-        subCategoryModels = new ArrayList<>();
-        subCategoryModels1 = new ArrayList<>();
-        subCategoryModels2 = new ArrayList<>();
+        // movies category all data
+        thirdLevelMovies.put(movies[0], horror);
+        thirdLevelMovies.put(movies[1], action);
+        thirdLevelMovies.put(movies[2], thriller);
+        thirdLevelMovies.put(movies[3], envelop);
 
-        subCategoryModels.add(0, new SubCatModel("onecat"));
-        subCategoryModels.add(0, new SubCatModel("onecat"));
-        subCategoryModels.add(0, new SubCatModel("onecat"));
 
-        subCategoryModels1.add(0, new SubCatModel("twocat"));
-        subCategoryModels1.add(0, new SubCatModel("twocat"));
-        subCategoryModels1.add(0, new SubCatModel("twocat"));
+        // games category all data
+//        thirdLevelGames.put(games[0], fps);
+//        thirdLevelGames.put(games[1], moba);
+//        thirdLevelGames.put(games[2], rpg);
+//        thirdLevelGames.put(games[3], racing);
 
-        subCategoryModels2.add(0, new SubCatModel("threecat"));
-        subCategoryModels2.add(0, new SubCatModel("threecat"));
-        subCategoryModels2.add(0, new SubCatModel("threecat"));
 
-        parentCategoryArray = new String[]{"one","two","three"};
 
-        expandedCategroryModelArrayList.add(new ParentCategoryModel(parentCategoryArray[0],0,subCategoryModels,false));
-        expandedCategroryModelArrayList.add(new ParentCategoryModel(parentCategoryArray[1],0,subCategoryModels1,false));
-        expandedCategroryModelArrayList.add(new ParentCategoryModel(parentCategoryArray[2],0,subCategoryModels2,false));
 
-          ExpandAdapter adapter = new ExpandAdapter(getActivity(),expandedCategroryModelArrayList);
-          LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-          categoryRecyler.setLayoutManager(layoutManager);
-          categoryRecyler.setAdapter(adapter);
+        // all data
+        data.add(thirdLevelMovies);
+        data.add(thirdLevelGames);
+        //data.add(thirdLevelSerials);
 
-           adapter.notifyDataSetChanged();
+
+        // expandable listview
+
+        // parent adapter
+        ThreeCatAdapter threeLevelListAdapterAdapter = new ThreeCatAdapter(getActivity(), parent, secondLevel, data);
+
+
+        // set adapter
+        expandableList.setAdapter( threeLevelListAdapterAdapter );
+
+
+        // OPTIONAL : Show one list at a time
+        expandableList.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+            int previousGroup = -1;
+
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                if (groupPosition != previousGroup)
+                    expandableList.collapseGroup(previousGroup);
+                previousGroup = groupPosition;
+            }
+        });
+
+
+
         return view;
     }
 }

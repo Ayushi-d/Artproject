@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
     BottomNavigationView navBar;
     Spinner timespinner;
     ConstraintLayout consspinner;
+    ConstraintLayout backimg;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,7 +59,13 @@ public class CheckoutFragment extends Fragment implements AdapterView.OnItemSele
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Checkout");
-
+        backimg = toolbar.findViewById(R.id.img_back);
+        backimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
         navBar = getActivity().findViewById(R.id.bottomNavigationView);
         navBar.setVisibility(View.GONE);
 

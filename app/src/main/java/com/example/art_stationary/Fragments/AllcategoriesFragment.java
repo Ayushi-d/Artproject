@@ -12,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.art_stationary.Adapter.Tabcategoriesadapter;
@@ -31,6 +32,7 @@ public class AllcategoriesFragment extends Fragment {
     ConstraintLayout toolbar;
     TextView tooltext;
     BottomNavigationView navBar;
+    ConstraintLayout backimg;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,13 @@ public class AllcategoriesFragment extends Fragment {
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
         tooltext.setText("Ink Categories");
+        backimg = toolbar.findViewById(R.id.img_back);
+        backimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
         tab_layout= view.findViewById(R.id.tab_layout);
 
 

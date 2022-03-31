@@ -81,21 +81,23 @@
         android:background="@drawable/logintextbackground"
         app:layout_constraintTop_toBottomOf="@id/et_mobile"/>
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_submit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/curvebuttombackground"
         android:backgroundTint="@color/buttongreen"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/popinsbold"
+        android:textColor="@color/white"
+        android:text="@string/submit"
         android:textSize="17dp"
         android:textStyle="bold"
-        android:background="@drawable/curvebuttombackground"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@id/guidelineleft"
         app:layout_constraintRight_toRightOf="@id/guidelineright"
-        app:layout_constraintTop_toBottomOf="@id/et_message"/>
-
+        app:layout_constraintTop_toBottomOf="@id/et_message" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineleft"

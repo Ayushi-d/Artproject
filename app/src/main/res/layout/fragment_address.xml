@@ -231,6 +231,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Checkout"
+        android:textColor="@color/white"
         android:backgroundTint="@color/buttongreen"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/popinsbold"

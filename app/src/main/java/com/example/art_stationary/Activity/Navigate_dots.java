@@ -70,6 +70,7 @@ public class Navigate_dots extends AppCompatActivity {
                 if (position == pageradapter.getItemCount()-1){
                     Intent send = new Intent(Navigate_dots.this, Singin.class);
                     startActivity(send);
+                    finish();
                 }else{
                     banner_view.smoothScrollToPosition(position+1);
                 }

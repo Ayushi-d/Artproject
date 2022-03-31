@@ -37,6 +37,7 @@ public class Select_language extends AppCompatActivity {
                 iconurdu.setVisibility(View.GONE);
                 Intent send = new Intent(Select_language.this, Navigate_dots.class);
                 startActivity(send);
+                finish();
 
             }
         });
@@ -50,6 +51,7 @@ public class Select_language extends AppCompatActivity {
                 iconeng.setVisibility(View.GONE);
                 Intent send = new Intent(Select_language.this, Navigate_dots.class);
                 startActivity(send);
+                finish();
             }
         });
 

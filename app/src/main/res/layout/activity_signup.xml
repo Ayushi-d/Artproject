@@ -157,6 +157,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/signup"
+        android:textColor="@color/white"
         android:backgroundTint="@color/buttongreen"
         android:layout_marginTop="20dp"
         android:textSize="17dp"

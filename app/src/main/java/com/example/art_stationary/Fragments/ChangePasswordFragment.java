@@ -66,7 +66,7 @@ public class ChangePasswordFragment extends Fragment {
         navBar.setVisibility(View.GONE);
         toolbar = view.findViewById(R.id.toolbar);
         tooltext = toolbar.findViewById(R.id.toolheadtext);
-        tooltext.setText("My Orders");
+        tooltext.setText("Change Password");
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

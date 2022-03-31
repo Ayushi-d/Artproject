@@ -483,6 +483,7 @@
         android:layout_marginTop="30dp"
         android:fontFamily="@font/popinsbold"
         android:textSize="17dp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/constrainview"
         android:layout_marginBottom="20dp"
