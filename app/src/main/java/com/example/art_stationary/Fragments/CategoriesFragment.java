@@ -32,6 +32,8 @@ import java.util.List;
 
 public class CategoriesFragment extends Fragment {
 
+    //Expandable List
+
     ConstraintLayout toolbar;
     TextView tooltext;
     BottomNavigationView navBar;

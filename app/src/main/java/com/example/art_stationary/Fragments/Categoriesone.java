@@ -27,6 +27,7 @@ import java.util.ArrayList;
 public class Categoriesone extends Fragment {
     RecyclerView categoriesonelist;
     private ArrayList<CategoriesModel> mycategorimodelArrayList;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,6 @@ public class Categoriesone extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_categoriesone, container, false);
         getActivity().getWindow().setStatusBarColor(getActivity().getColor(R.color.black));
-
         categoriesonelist=view.findViewById(R.id.categoriesonelist);
         mycategorimodelArrayList=new ArrayList<>();
 
